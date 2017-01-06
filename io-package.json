@@ -1,0 +1,34 @@
+{
+    "common": {
+        "name":                     "proxy",
+        "version": "0.1.0",
+        "news": {
+			"0.1.0": {
+                "en": 				"Inital version",
+                "de": 				"Erste Version",
+                "ru": 				"Первая версия"
+            }
+        },
+        "title":                    "proxy Adapter",
+        "desc":                     "This adapter allows to reach other HTTP servers (like WEB CAM) in the same web server",
+        "authors": [
+            "bluefox <dogafox@gmail.com>"
+        ],
+        "license":                  "MIT",
+        "platform":                 "Javascript/Node.js",
+        "mode":                     "daemon",
+        "loglevel":                 "info",
+        "icon":                     "proxy.png",
+        "webExtension":             "lib/proxy.js",
+        "readme":                   "https://github.com/ioBroker/ioBroker.proxy/blob/master/README.md",
+        "keywords":                 ["web", "proxy", "communication"],
+		"enabled":                  true,
+        "extIcon":                  "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/admin/proxy.png",
+		"type":                     "visualisation",
+        "dependencies":             [{"js-controller": ">=0.15.0"}]
+    },
+    "native": {
+        "webInstance":              "",
+        "rules":                    []
+    }
+}
