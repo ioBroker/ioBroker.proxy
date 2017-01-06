@@ -29,8 +29,10 @@
             "de": "Proxy Adapter Einstellungen",
             "ru": "Настройки Proxy драйвера"
         },
-        "Extend WEB adapter:":    {"en": "Extend WEB adapter:",     "de": "Erweitere WEB Adapter:",  "ru": "Подключить к WEB драйверу:"},
-        "all":                    {"en": "all",                     "de": "alle",                    "ru": "все"}
+        "Extend WEB adapter:":    {"en": "Extend WEB adapter:",     "de": "Erweitere WEB Adapter:", "ru": "Подключить к WEB драйверу:"},
+        "all":                    {"en": "all",                     "de": "alle",                   "ru": "все"},
+        "Context":                {"en": "Context",                 "de": "Kontext",                "ru": "Контекст"},
+        "URL":                    {"en": "URL",                     "de": "URL",                    "ru": "URL"}
     };
 
     // the function loadSettings has to exist ...
@@ -45,7 +47,7 @@
                     onChange();
                 });
             } else {
-                $('#' + key + '.value').val(settings[key]).change(function() {
+                $key.val(settings[key]).change(function() {
                     onChange();
                 }).keyup(function() {
                     onChange();
@@ -125,7 +127,6 @@
                 });
         }
 
-
         if (values) {
             var buttons = [];
             $('.table-values').data('values', values);
@@ -194,6 +195,7 @@
                     .click(function () {
                         var id = $(this).data('index');
                         values.splice(id, 1);
+                        onChange();
                         setTimeout(function () {
                             values2table(values, onChange);
                         }, 100);
@@ -255,8 +257,8 @@
                 <table class="table-values" style="width: 100%">
                     <thead>
                     <tr>
-                        <th data-name="regex" style="width: 30%">Shortcut</th>
-                        <th data-name="url">URL</th>
+                        <th data-name="regex" style="width: 30%" class="translate">Context</th>
+                        <th data-name="url" class="translate">URL</th>
                         <th data-buttons="delete" style="width: 32px"></th>
                     </tr>
                     </thead>

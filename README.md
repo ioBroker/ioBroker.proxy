@@ -1,23 +1,25 @@
-![Logo](admin/simple-api.png)
-ioBroker simple-api adapter
+![Logo](admin/proxy.png)
+ioBroker proxy adapter
 =================
-[![NPM version](http://img.shields.io/npm/v/iobroker.simple-api.svg)](https://www.npmjs.com/package/iobroker.simple-api)
-[![Downloads](https://img.shields.io/npm/dm/iobroker.simple-api.svg)](https://www.npmjs.com/package/iobroker.simple-api)
-[![Tests](https://travis-ci.org/ioBroker/ioBroker.simple-api.svg?branch=master)](https://travis-ci.org/ioBroker/ioBroker.simple-api)
+[![NPM version](http://img.shields.io/npm/v/iobroker.proxy.svg)](https://www.npmjs.com/package/iobroker.proxy)
+[![Downloads](https://img.shields.io/npm/dm/iobroker.proxy.svg)](https://www.npmjs.com/package/iobroker.proxy)
+[![Tests](https://travis-ci.org/ioBroker/ioBroker.proxy.svg?branch=master)](https://travis-ci.org/ioBroker/ioBroker.proxy)
 
-[![NPM](https://nodei.co/npm/iobroker.simple-api.png?downloads=true)](https://nodei.co/npm/iobroker.simple-api/)
+[![NPM](https://nodei.co/npm/iobroker.proxy.png?downloads=true)](https://nodei.co/npm/iobroker.proxy/)
 
-This is RESTFul interface to read the objects and states from ioBroker and to write/control the states over HTTP Get/Post requests.
+Allows to access defined URLs via one web server.
 
 ## Sample settings
-| regex          |      URL                                           |
-|----------------|:--------------------------------------------------:|
-| camFloor/*     | http://ipcam:1234/                                 |
-| camFloorPic    | http://ipcam:1234/snapshot.cgi?user=name&pass=pass |
-| secureCam      | https://secondCam/snapshot.cgi?user=name&pass=pass |
+| Context        |      URL                                           |      Description                                   |
+|----------------|:---------------------------------------------------|:---------------------------------------------------|
+| admin/         | http://localhost:8081                              | access to admin page                               |
+| router/        | http://192.168.1.1                                 | access to local router                             |
+| cam/           | http://user:pass@192.168.1.123                     | access to webcam (e.g. call http://ip:8082/proxy.0/cam/web/snapshot.jpg) |
 
+**Not all devices can be accessed via proxy. 
+Some devices wants to be located in the root ```http://ip/``` and cannot run under ```http://ip/proxy.0/context/```.
 
-The user can define internal URLs like "http://webcam/snapshot.jpg" and can access it via WEB adapter.
+You can read more about context [here](https://www.npmjs.com/package/http-proxy-middleware#context-matching)
 
 ## Changelog
 
