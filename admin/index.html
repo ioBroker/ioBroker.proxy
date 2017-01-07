@@ -38,6 +38,7 @@
     // the function loadSettings has to exist ...
     function load(settings, onChange) {
         if (!settings) return;
+        if (!settings.route) settings.route = 'proxy.' + instance + '/';
 
         $('.value').each(function () {
             var key = $(this).attr('id');
@@ -229,6 +230,7 @@
                 obj[$this.attr('id')] = $this.val();
             }
         });
+        if (obj.route === 'proxy.' + instance + '/') obj.route = '';
         obj.rules = table2values();
 
         callback(obj);
@@ -246,6 +248,10 @@
                     <option value="*" class="translate">all</option>
                 </select>
             </td>
+        </tr>
+        <tr>
+            <td style="width: 200px;"><label for="route" class="translate">Route path:</label></td>
+            <td><input class="value" id="route"/></td>
         </tr>
         <tr>
             <td colspan="2">&nbsp;

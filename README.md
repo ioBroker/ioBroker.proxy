@@ -9,6 +9,8 @@ ioBroker proxy adapter
 
 Allows to access defined URLs via one web server.
 
+Specified routes will be available under ```http://ip:8082/proxy.0/context/...```. Of course port, protocol, "proxy.0", can variate depends on settings.
+
 ## Sample settings
 | Context        |      URL                                           |      Description                                   |
 |----------------|:---------------------------------------------------|:---------------------------------------------------|
@@ -20,6 +22,8 @@ Allows to access defined URLs via one web server.
 Some devices wants to be located in the root ```http://ip/``` and cannot run under ```http://ip/proxy.0/context/```.
 
 You can read more about context [here](https://www.npmjs.com/package/http-proxy-middleware#context-matching)
+
+Additionally the user can define the route path for proxy requests.
 
 ## Changelog
 

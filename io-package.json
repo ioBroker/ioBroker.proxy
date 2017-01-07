@@ -28,6 +28,7 @@
         "dependencies":             [{"js-controller": ">=0.15.0"}]
     },
     "native": {
+        "route":                    "",
         "webInstance":              "",
         "rules":                    []
     }
