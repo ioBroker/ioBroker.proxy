@@ -16,7 +16,7 @@
         ],
         "license":                  "MIT",
         "platform":                 "Javascript/Node.js",
-        "mode":                     "daemon",
+        "mode":                     "extension",
         "loglevel":                 "info",
         "icon":                     "proxy.png",
         "webExtension":             "lib/proxy.js",
