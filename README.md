@@ -30,5 +30,8 @@ Additionally the user can define the route path for proxy requests.
 
 ## Changelog
 
+### 0.2.0 (2017-03-13)
+* (bluefox) fix run-mode
+
 ### 0.0.1 (2017-01-09)
 * (bluefox) initial commit

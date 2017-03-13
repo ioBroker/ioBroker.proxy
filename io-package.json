@@ -1,9 +1,14 @@
 {
     "common": {
         "name":                     "proxy",
-        "version": "0.1.0",
+        "version": "0.2.0",
         "news": {
-			"0.1.0": {
+			"0.2.0": {
+                "en": 				"fix run-mode",
+                "de": 				"Korrigiere Run-Modus",
+                "ru": 				"Исправлен режим запуска"
+            },
+            "0.1.0": {
                 "en": 				"Inital version",
                 "de": 				"Erste Version",
                 "ru": 				"Первая версия"
@@ -30,6 +35,19 @@
     "native": {
         "route":                    "",
         "webInstance":              "",
-        "rules":                    []
+        "rules":                    [
+            {
+                "regex": "sonos/",
+                "url": "http://localhost:8083"
+            },
+            {
+                "regex": "api/",
+                "url": "http://localhost:8084"
+            },
+            {
+                "regex": "node-red/",
+                "url": "http://localhost:1880"
+            }
+        ]
     }
 }
