@@ -5,6 +5,8 @@ var request = require('request');
 var objects = null;
 var states  = null;
 
+var adapterShortName = setup.adapterName.substring(setup.adapterName.indexOf('.')+1);
+
 process.env.NO_PROXY = '127.0.0.1';
 
 describe('Test WEB extension', function() {
