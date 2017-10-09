@@ -17,7 +17,7 @@
     "url": "https://github.com/ioBroker/ioBroker.proxy"
   },
   "dependencies": {
-    "http-proxy-middleware": "^0.17.3",
+    "http-proxy-middleware": ">=0.17.4",
     "mime": "^1"
   },
   "devDependencies": {
