@@ -1,6 +1,6 @@
 {
   "name": "iobroker.proxy",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Proxy for WEB server.",
   "author": {
     "name": "bluefox",
@@ -17,7 +17,8 @@
     "url": "https://github.com/ioBroker/ioBroker.proxy"
   },
   "dependencies": {
-    "http-proxy-middleware": "^0.17.3"
+    "http-proxy-middleware": "^0.17.3",
+    "mime": "^1"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
