@@ -1,47 +1,55 @@
 {
     "common": {
-        "name":                     "proxy",
+        "name": "proxy",
         "version": "1.0.0",
         "news": {
             "1.0.0": {
-                "en": 				"do not allow the error generation to fast",
-                "de": 				"Erlaube nicht die Fehler zu oft zu generieren",
-                "ru": 				"Запрет на слишком частые ошибки запросов"
+                "en": "do not allow the error generation to fast",
+                "de": "Erlaube nicht die Fehler zu oft zu generieren",
+                "ru": "Запрет на слишком частые ошибки запросов"
             },
-			"0.2.0": {
-                "en": 				"fix run-mode",
-                "de": 				"Korrigiere Run-Modus",
-                "ru": 				"Исправлен режим запуска"
+            "0.2.0": {
+                "en": "fix run-mode",
+                "de": "Korrigiere Run-Modus",
+                "ru": "Исправлен режим запуска"
             },
             "0.1.0": {
-                "en": 				"Inital version",
-                "de": 				"Erste Version",
-                "ru": 				"Первая версия"
+                "en": "Inital version",
+                "de": "Erste Version",
+                "ru": "Первая версия"
             }
         },
-        "title":                    "proxy Adapter",
-        "desc":                     "This adapter allows to reach other HTTP servers (like WEB CAM) in the same web server",
+        "title": "proxy Adapter",
+        "desc": "This adapter allows to reach other HTTP servers (like WEB CAM) in the same web server",
         "authors": [
             "bluefox <dogafox@gmail.com>"
         ],
-        "license":                  "MIT",
-        "platform":                 "Javascript/Node.js",
-        "mode":                     "extension",
-        "loglevel":                 "info",
-        "icon":                     "proxy.png",
-        "webExtension":             "lib/proxy.js",
-        "readme":                   "https://github.com/ioBroker/ioBroker.proxy/blob/master/README.md",
-        "keywords":                 ["web", "proxy", "communication"],
-		"enabled":                  true,
-        "extIcon":                  "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/admin/proxy.png",
-		"type":                     "visualisation",
-        "dependencies":             [{"js-controller": ">=0.15.0"}]
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "mode": "extension",
+        "loglevel": "info",
+        "icon": "proxy.png",
+        "webExtension": "lib/proxy.js",
+        "readme": "https://github.com/ioBroker/ioBroker.proxy/blob/master/README.md",
+        "keywords": [
+            "web",
+            "proxy",
+            "communication"
+        ],
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/admin/proxy.png",
+        "type": "network",
+        "dependencies": [
+            {
+                "js-controller": ">=0.15.0"
+            }
+        ]
     },
     "native": {
-        "route":                    "",
-        "webInstance":              "",
-        "errorTimeout":             10000,
-        "rules":                    [
+        "route": "",
+        "webInstance": "",
+        "errorTimeout": 10000,
+        "rules": [
             {
                 "regex": "sonos/",
                 "url": "http://localhost:8083"
