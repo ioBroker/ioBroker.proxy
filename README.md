@@ -1,6 +1,7 @@
 ![Logo](admin/proxy.png)
-# ioBroker proxy adapter
+# ioBroker.proxy
 =================
+
 [![NPM version](http://img.shields.io/npm/v/iobroker.proxy.svg)](https://www.npmjs.com/package/iobroker.proxy)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.proxy.svg)](https://www.npmjs.com/package/iobroker.proxy)
 [![Tests](https://travis-ci.org/ioBroker/ioBroker.proxy.svg?branch=master)](https://travis-ci.org/ioBroker/ioBroker.proxy)
@@ -28,6 +29,7 @@ Specified routes will be available under ```http://ip:8082/proxy.0/context/...``
 | file.jpg       | /tmp/picture.jpg                                   | access to local file "/tmp/picture.jpg"            |
 
 **Not all devices can be accessed via proxy. 
+
 Some devices wants to be located in the root ```http://ip/``` and cannot run under ```http://ip/proxy.0/context/```.
 
 You can read more about context [here](https://www.npmjs.com/package/http-proxy-middleware#context-matching)
@@ -35,6 +37,9 @@ You can read more about context [here](https://www.npmjs.com/package/http-proxy-
 Additionally the user can define the route path for proxy requests.
 
 ## Changelog
+### 1.0.1 (2018-03-01)
+* (bluefox) Fixed error: after 10 timeouts the web cam was never reachable
+* (bluefox) Ready for Admin3
 
 ### 1.0.0 (2017-10-09)
 * (bluefox) do not allow the error generation to fast

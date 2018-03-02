@@ -1,0 +1,162 @@
+<html>
+<head>
+<!-- Materialze style -->
+<link rel="stylesheet" type="text/css" href="../../css/adapter.css"/>
+<link rel="stylesheet" type="text/css" href="../../lib/css/materialize.css">
+
+<script type="text/javascript" src="../../lib/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../../socket.io/socket.io.js"></script>
+
+<script type="text/javascript" src="../../js/translate.js"></script>
+<script type="text/javascript" src="../../lib/js/materialize.js"></script>
+<script type="text/javascript" src="../../js/adapter-settings.js"></script>
+<script type="text/javascript" src="words.js"></script>
+<script type="text/javascript">
+    function load(settings, onChange) {
+        if (!settings) return;
+        if (!settings.route) settings.route = 'proxy.' + instance + '/';
+        if (!settings.errorTimeout) settings.errorTimeout = 10000;
+
+        $('.value').each(function () {
+            var key = $(this).attr('id');
+            var $key = $('#' + key + '.value');
+            if ($key.attr('type') === 'checkbox') {
+                $key.prop('checked', settings[key]).change(function() {
+                    onChange();
+                });
+            } else {
+                $key.val(settings[key]).on('change', function() {
+                    onChange();
+                }).on('keyup', function() {
+                    onChange();
+                });
+            }
+        });
+
+        getExtendableInstances(function (result) {
+            if (result) {
+                var text = '';
+                for (var r = 0; r < result.length; r++) {
+                    var name = result[r]._id.substring('system.adapter.'.length);
+                    text += '<option value="' + name + '" ' + (settings.webInstance === name ? 'selected' : '') + '>' + name + '</option>';
+                }
+                $('#webInstance').append(text).select();
+            }
+        });
+
+        onChange(false);
+        values2table('values', settings.rules, onChange);
+    }
+
+    function save(callback) {
+        var obj = {};
+        $('.value').each(function () {
+            var $this = $(this);
+            if ($this.attr('type') === 'checkbox') {
+                obj[$this.attr('id')] = $this.prop('checked');
+            } else {
+                obj[$this.attr('id')] = $this.val();
+            }
+        });
+        if (obj.route === 'proxy.' + instance + '/') obj.route = '';
+        obj.rules = table2values();
+
+        callback(obj);
+    }
+</script>
+    <style>
+        #values {
+            width: 100%;
+            height: 100%;
+        }
+        .table-values-div {
+            width:      100%;
+            height:     calc(100% - 30px);
+            overflow:   auto;
+        }
+        .table-values {
+            width:      100%;
+        }
+        .adapter-container>.row {
+            margin-bottom: 0;
+        }
+        #tab-paths {
+            height: calc(100% - 50px);
+            overflow: hidden;
+        }
+        #tab-paths>.row {
+            height: 100%;
+        }
+        .m .select-wrapper+label {
+            top: 100%;
+        }
+        .m td, .m th {
+            padding: 2px 4px;
+        }
+        .m td input {
+            height: 2rem !important;
+        }
+        .table-values-div {
+            height: calc(100% - 40px);
+        }
+    </style>
+</head>
+<body>
+<div class="adapter-container m">
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s4"><a href="#tab-main"  class="translate active">Main settings</a></li>
+                <li class="tab col s4"><a href="#tab-paths" class="translate">Paths</a></li>
+            </ul>
+        </div>
+        <div id="tab-main"  class="col s12 page">
+            <div class="row">
+                <div class="col s12 m4 l2">
+                    <img src="proxy.png" class="logo">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m4">
+                    <select class="value" id="webInstance">
+                        <option value="*" class="translate">all</option>
+                    </select>
+                    <label for="webInstance" class="translate">Extend WEB adapter:</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m4">
+                    <input class="value" id="route"/>
+                    <label for="route" class="translate">Route path:</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m4">
+                    <input class="value" id="errorTimeout" type="number" min="1000"/>
+                    <label for="errorTimeout" class="translate">Error timeout(ms):</label>
+                </div>
+            </div>
+        </div>
+        <div id="tab-paths" class="col s12 page">
+            <div class="row">
+                <div class="col s12" id="values">
+                    <a class="btn-floating waves-effect waves-light blue table-button-add"><i class="material-icons">add</i></a>
+                    <div class="table-values-div">
+                        <table class="table-values">
+                            <thead>
+                            <tr>
+                                <th data-name="regex"     style="width: 30%" class="translate">Context</th>
+                                <th data-name="url"       class="translate">URL</th>
+                                <th data-name="timeout"   style="width: 70px" data-style="width: 70px" data-type="number" class="translate">Timeout</th>
+                                <th data-buttons="delete up down" style="width: 70px"></th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

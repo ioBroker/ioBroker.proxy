@@ -1,8 +1,19 @@
 {
     "common": {
         "name": "proxy",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "news": {
+            "1.0.1": {
+                "en": "Fixed error: after 10 timeouts the web cam was never reachable\nReady for Admin3",
+                "de": "Fehler behoben: Nach 10 Timeouts war die Webcam nie erreichbar\nBereit für Admin3",
+                "ru": "Исправлена ​​ошибка: после 10 тайм-аутов веб-камера была недоступна\nГотово для Admin3",
+                "pt": "Erro corrigido: após 10 temporizações, a web cam nunca foi alcançada\nPronto para Admin3",
+                "nl": "Vaste fout: na 10 time-outs was de webcam nooit bereikbaar\nKlaar voor Admin3",
+                "fr": "Correction d'une erreur: après 10 timeouts, la webcam n'a jamais été accessible\nPrêt pour Admin3",
+                "it": "Risolto errore: dopo 10 timeout la web cam non era mai raggiungibile\nPronto per Admin3",
+                "es": "Error reparado: después de 10 tiempos de espera la cámara web nunca fue alcanzable\nListo para Admin3",
+                "pl": "Naprawiono błąd: po 10 przekroczeniach czasu kamera internetowa nigdy nie była dostępna\nGotowy na Admin3"
+            },
             "1.0.0": {
                 "en": "do not allow the error generation to fast",
                 "de": "Erlaube nicht die Fehler zu oft zu generieren",
@@ -19,8 +30,18 @@
                 "ru": "Первая версия"
             }
         },
-        "title": "proxy Adapter",
-        "desc": "This adapter allows to reach other HTTP servers (like WEB CAM) in the same web server",
+        "title": "proxy",
+        "desc": {
+            "en": "This adapter allows to reach other HTTP servers (like WEB CAM) in the same web server",
+            "de": "Dieser Adapter ermöglicht es, andere HTTP-Server (wie WEB CAM) auf demselben Webserver zu erreichen",
+            "ru": "Этот адаптер позволяет опрашивать другие HTTP-серверы (например, WEB CAM) на одном и том же веб-сервере",
+            "pt": "Este adaptador permite alcançar outros servidores HTTP (como WEB CAM) no mesmo servidor web",
+            "nl": "Met deze adapter kunnen andere HTTP-servers (zoals WEB CAM) op dezelfde webserver worden bereikt",
+            "fr": "Cet adaptateur permet d'atteindre d'autres serveurs HTTP (comme WEB CAM) sur le même serveur web",
+            "it": "Questo adattatore consente di raggiungere altri server HTTP (come WEB CAM) nello stesso server web",
+            "es": "Este adaptador permite llegar a otros servidores HTTP (como WEB CAM) en el mismo servidor web",
+            "pl": "Ten adapter umożliwia dotarcie do innych serwerów HTTP (takich jak WEB CAM) na tym samym serwerze internetowym"
+        },
         "authors": [
             "bluefox <dogafox@gmail.com>"
         ],
@@ -36,6 +57,7 @@
             "proxy",
             "communication"
         ],
+        "materialize": true,
         "enabled": true,
         "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/admin/proxy.png",
         "type": "network",
