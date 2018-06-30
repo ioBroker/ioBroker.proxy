@@ -37,6 +37,9 @@ You can read more about context [here](https://www.npmjs.com/package/http-proxy-
 Additionally the user can define the route path for proxy requests.
 
 ## Changelog
+### 1.0.2 (2018-06-30)
+* (bluefox) URI was decoded for usage of special chars in password and login
+
 ### 1.0.1 (2018-03-01)
 * (bluefox) Fixed error: after 10 timeouts the web cam was never reachable
 * (bluefox) Ready for Admin3

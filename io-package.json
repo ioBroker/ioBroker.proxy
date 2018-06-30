@@ -1,8 +1,19 @@
 {
     "common": {
         "name": "proxy",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "news": {
+            "1.0.2": {
+                "en": "URI was decoded for usage of special chars in password and login",
+                "de": "URI wurde für die Verwendung spezieller Zeichen in Passwort und Login decodiert",
+                "ru": "URI был декодирован для использования специальных символов в пароле и логине",
+                "pt": "URI foi decodificado para uso de caracteres especiais em senha e login",
+                "nl": "URI is gedecodeerd voor het gebruik van speciale tekens in wachtwoord en aanmelding",
+                "fr": "URI a été décodé pour l'utilisation de caractères spéciaux dans le mot de passe et la connexion",
+                "it": "L'URI è stato decodificato per l'utilizzo di caratteri speciali in password e login",
+                "es": "El URI se decodificó para el uso de caracteres especiales en la contraseña y el inicio de sesión",
+                "pl": "Identyfikator URI został zdekodowany w celu użycia specjalnych znaków w haśle i logowaniu"
+            },
             "1.0.1": {
                 "en": "Fixed error: after 10 timeouts the web cam was never reachable\nReady for Admin3",
                 "de": "Fehler behoben: Nach 10 Timeouts war die Webcam nie erreichbar\nBereit für Admin3",
