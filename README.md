@@ -37,6 +37,9 @@ You can read more about context [here](https://www.npmjs.com/package/http-proxy-
 Additionally the user can define the route path for proxy requests.
 
 ## Changelog
+### 1.0.3 (2018-07-14)
+* (bluefox) Newer mime version used
+
 ### 1.0.2 (2018-06-30)
 * (bluefox) URI was decoded for usage of special chars in password and login
 

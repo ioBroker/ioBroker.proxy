@@ -1,8 +1,19 @@
 {
     "common": {
         "name": "proxy",
-        "version": "1.0.2",
+        "version": "1.0.3",
         "news": {
+            "1.0.3": {
+                "en": "Newer mime version used",
+                "de": "Neuere Mime-Version verwendet",
+                "ru": "Используется новая версия mime",
+                "pt": "Versão mais recente de mímica usada",
+                "nl": "Nieuwere mime-versie gebruikt",
+                "fr": "Nouvelle version mime utilisée",
+                "it": "È stata utilizzata la versione più recente di mimo",
+                "es": "Nueva versión mime utilizada",
+                "pl": "Zastosowano nowszą wersję mime"
+            },
             "1.0.2": {
                 "en": "URI was decoded for usage of special chars in password and login",
                 "de": "URI wurde für die Verwendung spezieller Zeichen in Passwort und Login decodiert",
