@@ -2,7 +2,7 @@
 # ioBroker.proxy
 =================
 
-[![NPM version](http://img.shields.io/npm/v/iobroker.proxy.svg)](https://www.npmjs.com/package/iobroker.proxy)
+![Number of Installations](http://iobroker.live/badges/proxy-installed.svg) ![Number of Installations](http://iobroker.live/badges/proxy-stable.svg) [![NPM version](http://img.shields.io/npm/v/iobroker.proxy.svg)](https://www.npmjs.com/package/iobroker.proxy)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.proxy.svg)](https://www.npmjs.com/package/iobroker.proxy)
 [![Tests](https://travis-ci.org/ioBroker/ioBroker.proxy.svg?branch=master)](https://travis-ci.org/ioBroker/ioBroker.proxy)
 
