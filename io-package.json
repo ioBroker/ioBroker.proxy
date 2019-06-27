@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "proxy",
-        "version": "1.0.3",
+        "version": "1.1.0",
         "news": {
+            "1.1.0": {
+                "en": "Implemented simple proxy to eliminate socket.io problem",
+                "de": "Implementierter einfacher Proxy, um das socket.io-Problem zu beseitigen",
+                "ru": "Реализован простой прокси для устранения проблемы socket.io",
+                "pt": "Implementado proxy simples para eliminar o problema do socket.io",
+                "nl": "Eenvoudige proxy geïmplementeerd om het socket.io-probleem te elimineren",
+                "fr": "Mise en œuvre de proxy simple pour éliminer le problème socket.io",
+                "it": "Implementato semplice proxy per eliminare il problema socket.io",
+                "es": "Implementado proxy simple para eliminar el problema de socket.io.",
+                "pl": "Zaimplementowano proste proxy w celu wyeliminowania problemu z socket.io",
+                "zh-cn": "实现简单代理以消除socket.io问题"
+            },
             "1.0.3": {
                 "en": "Newer mime version used",
                 "de": "Neuere Mime-Version verwendet",
@@ -94,6 +106,7 @@
         "route": "",
         "webInstance": "",
         "errorTimeout": 10000,
+        "simpleProxy": false,
         "rules": [
             {
                 "regex": "sonos/",
