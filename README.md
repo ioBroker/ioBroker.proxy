@@ -28,7 +28,7 @@ Specified routes will be available under `http://ip:8082/proxy.0/context/...`. O
 | dir/           | tmp/                                               | access to local directory "/opt/iobroker/tmp"      |
 | file.jpg       | /tmp/picture.jpg                                   | access to local file "/tmp/picture.jpg"            |
 
-**Not all devices can be accessed via proxy. 
+**Not all devices can be accessed via proxy.** 
 
 Some devices wants to be located in the root `http://ip/` and cannot run under `http://ip/proxy.0/context/`.
 
