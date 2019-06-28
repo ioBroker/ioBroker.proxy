@@ -11,5 +11,17 @@ systemDictionary = {
     "Route path:": {                                 "en": "Route path",                                      "de": "Route-Weg",                                       "ru": "Путь в URL",                                      "pt": "Caminho da rota",                                 "nl": "Route pad",                                       "fr": "Chemin d'itinéraire",                             "it": "Percorso percorso",                               "es": "Ruta de la ruta",                                 "pl": "Ścieżka trasy"},
     "Paths": {                                       "en": "Paths",                                           "de": "Pfade",                                           "ru": "пути",                                            "pt": "Caminhos",                                        "nl": "Paths",                                           "fr": "Chemins",                                         "it": "percorsi",                                        "es": "Caminos",                                         "pl": "Ścieżki"},
     "Error timeout(ms):": {                          "en": "Error timeout (ms)",                              "de": "Fehler-Timeout (ms)",                             "ru": "Тайм-аут ошибки (мс)",                            "pt": "Tempo limite de erro (ms)",                       "nl": "Fout-time-out (ms)",                              "fr": "Délai d'erreur (ms)",                             "it": "Timeout errore (ms)",                             "es": "Tiempo de espera de error (ms)",                  "pl": "Błąd limitu czasu (ms)"},
-    "Timeout": {                                     "en": "Timeout",                                         "de": "Auszeit",                                         "ru": "Тайм-аут",                                        "pt": "Tempo limite",                                    "nl": "timeout",                                         "fr": "Timeout",                                         "it": "timeout",                                         "es": "Tiempo de espera",                                "pl": "Limit czasu"}
+    "Timeout": {                                     "en": "Timeout",                                         "de": "Auszeit",                                         "ru": "Тайм-аут",                                        "pt": "Tempo limite",                                    "nl": "timeout",                                         "fr": "Timeout",                                         "it": "timeout",                                         "es": "Tiempo de espera",                                "pl": "Limit czasu"},
+    "Use simple proxy (no sockets)": {
+        "en": "Use simple proxy (no sockets)",
+        "de": "Einen einfachen Proxy verwenden(keine Sockets)",
+        "ru": "Простой прокси (без сокетов)",
+        "pt": "Use proxy simples (sem soquetes)",
+        "nl": "Gebruik eenvoudige proxy (geen sockets)",
+        "fr": "Utiliser un proxy simple (pas de sockets)",
+        "it": "Usa proxy semplice (senza prese)",
+        "es": "Usar proxy simple (sin sockets)",
+        "pl": "Użyj prostego proxy (bez gniazd)",
+        "zh-cn": "使用简单代理（无套接字）"
+    }
 };
