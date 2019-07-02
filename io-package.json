@@ -1,9 +1,9 @@
 {
     "common": {
         "name": "proxy",
-        "version": "1.1.0",
+        "version": "1.1.1",
         "news": {
-            "1.1.0": {
+            "1.1.1": {
                 "en": "Implemented simple proxy to eliminate socket.io problem",
                 "de": "Implementierter einfacher Proxy, um das socket.io-Problem zu beseitigen",
                 "ru": "Реализован простой прокси для устранения проблемы socket.io",
