@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "proxy",
-        "version": "1.1.1",
+        "version": "1.2.0",
         "news": {
+            "1.2.0": {
+                "en": "dependencies updated",
+                "de": "Abhängigkeiten aktualisiert",
+                "ru": "обновлены зависимости",
+                "pt": "dependências atualizadas",
+                "nl": "afhankelijkheden bijgewerkt",
+                "fr": "dépendances mises à jour",
+                "it": "dipendenze aggiornate",
+                "es": "dependencias actualizadas",
+                "pl": "zależności zaktualizowane",
+                "zh-cn": "依赖关系已更新"
+            },
             "1.1.1": {
                 "en": "Implemented simple proxy to eliminate socket.io problem",
                 "de": "Implementierter einfacher Proxy, um das socket.io-Problem zu beseitigen",
