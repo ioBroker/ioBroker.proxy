@@ -17,14 +17,14 @@
     "url": "https://github.com/ioBroker/ioBroker.proxy"
   },
   "dependencies": {
-    "http-proxy-middleware": "^1.0.1",
+    "http-proxy-middleware": "^1.0.3",
     "mime": "^2.4.4",
     "@iobroker/adapter-core": "^2.2.1",
-    "request": "^2.88.0"
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
-    "mocha": "^7.1.0",
+    "mocha": "^7.1.1",
     "chai": "^4.2.0"
   },
   "bugs": {
