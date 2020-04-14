@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "proxy",
-        "version": "1.2.0",
+        "version": "1.2.1",
         "news": {
+            "1.2.1": {
+                "en": "Corrected error with access to local files",
+                "de": "Fehler beim Zugriff auf lokale Dateien behoben",
+                "ru": "Исправлена ошибка с доступом к локальным файлам",
+                "pt": "Erro corrigido com o acesso a arquivos locais",
+                "nl": "Gecorrigeerde fout met toegang tot lokale bestanden",
+                "fr": "Erreur corrigée avec l'accès aux fichiers locaux",
+                "it": "Errore corretto con accesso ai file locali",
+                "es": "Error corregido con acceso a archivos locales",
+                "pl": "Poprawiony błąd dostępu do lokalnych plików",
+                "zh-cn": "纠正了对本地文件的访问错误"
+            },
             "1.2.0": {
                 "en": "dependencies updated",
                 "de": "Abhängigkeiten aktualisiert",
