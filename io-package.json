@@ -121,7 +121,7 @@
         "type": "network",
         "dependencies": [
             {
-                "js-controller": ">=0.15.0",
+                "js-controller": ">=2.0.0",
                 "web": ">=1.5.4"
             }
         ]
