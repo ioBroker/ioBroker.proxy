@@ -40,6 +40,7 @@ Additionally the user can define the route path for proxy requests.
 
 ### __WORK IN PROGRESS__
 * (Apollon77) Fallback to "application/octet-stream" when mime type for a file could not be determined
+* (Apollon77) Cut filenames when looking them up in the filesystem if "?" or "#" are included 
 
 ### 1.2.1 (2020-04-14)
 * (bluefox) Corrected error with access to local files
