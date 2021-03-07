@@ -1,8 +1,20 @@
 {
     "common": {
         "name": "proxy",
-        "version": "1.2.1",
+        "version": "1.2.2",
         "news": {
+            "1.2.2": {
+                "en": "Fallback to \"application/octet-stream\" when mime type for a file could not be determined\nCut filenames when looking them up in the filesystem if \"?\" or \"#\" are included",
+                "de": "Fallback auf \"application / octet-stream\", wenn der MIME-Typ für eine Datei nicht ermittelt werden konnte\nSchneiden Sie Dateinamen aus, wenn Sie sie im Dateisystem nachschlagen, wenn \"?\" oder \"#\" sind enthalten",
+                "ru": "Возврат к «application / octet-stream», когда тип MIME для файла не может быть определен\nВырезайте имена файлов при поиске их в файловой системе, если \"?\" или \"#\" включены",
+                "pt": "Fallback de \"application / octet-stream\" quando o tipo MIME de um arquivo não puder ser determinado\nCorte os nomes dos arquivos ao procurá-los no sistema de arquivos se \"?\" ou \"#\" estão incluídos",
+                "nl": "Terugval op \"application / octet-stream\" wanneer het mime-type voor een bestand niet kon worden bepaald\nKnip bestandsnamen bij het opzoeken in het bestandssysteem als \"?\" of \"#\" zijn inbegrepen",
+                "fr": "Revenir à \"application / octet-stream\" lorsque le type mime d'un fichier n'a pas pu être déterminé\nCoupez les noms de fichiers lorsque vous les recherchez dans le système de fichiers si \"?\" ou \"#\" sont inclus",
+                "it": "Fallback a \"application / octet-stream\" quando non è stato possibile determinare il tipo MIME per un file\nTaglia i nomi dei file quando li cerchi nel filesystem se \"?\" o \"#\" sono inclusi",
+                "es": "Volver a \"application / octet-stream\" cuando no se pudo determinar el tipo de mime de un archivo\nCorte los nombres de archivo cuando los busque en el sistema de archivos si \"?\" o \"#\" están incluidos",
+                "pl": "Powrót do „application / octet-stream”, gdy nie można określić typu MIME dla pliku\nWytnij nazwy plików podczas wyszukiwania ich w systemie plików, jeśli \"?\" lub „#” są uwzględnione",
+                "zh-cn": "无法确定文件的哑剧类型时回退到“应用程序/八位字节流”\n如果在文件系统中查找文件名，则剪切文件名是否为“？”或包含“＃”"
+            },
             "1.2.1": {
                 "en": "Corrected error with access to local files",
                 "de": "Fehler beim Zugriff auf lokale Dateien behoben",
