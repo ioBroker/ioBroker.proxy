@@ -1,0 +1,12 @@
+{
+    "Context": "Kontekst",
+    "Error timeout(ms):": "Błąd limitu czasu (ms)",
+    "Extend WEB adapter:": "Przedłuż adapter WEB",
+    "Paths": "Ścieżki",
+    "Proxy adapter settings": "Ustawienia adaptera proxy",
+    "Route path:": "Ścieżka trasy",
+    "Timeout": "Limit czasu",
+    "URL": "URL",
+    "Use simple proxy (no sockets)": "Użyj prostego proxy (bez gniazd)",
+    "all": "wszystko"
+}

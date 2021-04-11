@@ -110,7 +110,8 @@
             "fr": "Cet adaptateur permet d'atteindre d'autres serveurs HTTP (comme WEB CAM) sur le même serveur web",
             "it": "Questo adattatore consente di raggiungere altri server HTTP (come WEB CAM) nello stesso server web",
             "es": "Este adaptador permite llegar a otros servidores HTTP (como WEB CAM) en el mismo servidor web",
-            "pl": "Ten adapter umożliwia dotarcie do innych serwerów HTTP (takich jak WEB CAM) na tym samym serwerze internetowym"
+            "pl": "Ten adapter umożliwia dotarcie do innych serwerów HTTP (takich jak WEB CAM) na tym samym serwerze internetowym",
+            "zh-cn": "此适配器允许访问同一Web服务器中的其他HTTP服务器（例如WEB CAM）"
         },
         "authors": [
             "bluefox <dogafox@gmail.com>"

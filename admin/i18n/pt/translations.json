@@ -1,0 +1,12 @@
+{
+    "Context": "Contexto",
+    "Error timeout(ms):": "Tempo limite de erro (ms)",
+    "Extend WEB adapter:": "Alargar o adaptador WEB",
+    "Paths": "Caminhos",
+    "Proxy adapter settings": "Configurações do adaptador proxy",
+    "Route path:": "Caminho da rota",
+    "Timeout": "Tempo limite",
+    "URL": "URL",
+    "Use simple proxy (no sockets)": "Use proxy simples (sem soquetes)",
+    "all": "todos"
+}

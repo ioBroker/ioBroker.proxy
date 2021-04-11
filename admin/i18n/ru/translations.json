@@ -1,0 +1,12 @@
+{
+    "Context": "Контекст",
+    "Error timeout(ms):": "Тайм-аут ошибки (мс)",
+    "Extend WEB adapter:": "Подключить к WEB драйверу",
+    "Paths": "пути",
+    "Proxy adapter settings": "Настройки Proxy драйвера",
+    "Route path:": "Путь в URL",
+    "Timeout": "Тайм-аут",
+    "URL": "URL",
+    "Use simple proxy (no sockets)": "Простой прокси (без сокетов)",
+    "all": "все"
+}
