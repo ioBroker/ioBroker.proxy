@@ -1,7 +1,7 @@
 {
     "Context": "Context",
     "Error timeout(ms):": "Error timeout (ms)",
-    "Extend WEB adapter:": "Extend WEB adapter",
+    "Extend WEB adapter:": "Use as web adapter extension",
     "Paths": "Paths",
     "Proxy adapter settings": "Proxy adapter settings",
     "Route path:": "Route path",
