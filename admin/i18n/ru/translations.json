@@ -1,7 +1,7 @@
 {
     "Context": "Контекст",
     "Error timeout(ms):": "Тайм-аут ошибки (мс)",
-    "Extend WEB adapter:": "Подключить к WEB драйверу",
+    "Extend WEB adapter:": "Использовать, как расширение web-драйвера",
     "Paths": "пути",
     "Proxy adapter settings": "Настройки Proxy драйвера",
     "Route path:": "Путь в URL",
