@@ -4,9 +4,9 @@
     "Extend WEB adapter:": "Als Web-Adapter-Erweiterung nutzen",
     "Paths": "Pfade",
     "Proxy adapter settings": "Proxy Adapter Einstellungen",
-    "Route path:": "Route-Weg",
-    "Timeout": "Auszeit",
+    "Route path:": "Routenpfad",
+    "Timeout": "Timeout",
     "URL": "URL",
-    "Use simple proxy (no sockets)": "Einen einfachen Proxy verwenden(keine Sockets)",
+    "Use simple proxy (no sockets)": "Einfachen Proxy verwenden (keine Sockets)",
     "all": "alle"
 }
