@@ -37,14 +37,13 @@ You can read more about context [here](https://www.npmjs.com/package/http-proxy-
 Additionally the user can define the route path for proxy requests.
 
 ## Changelog
-
-### __WORK IN PROGRESS__
+### 1.3.0 (2022-05-30)
 * (Apollon77) Allow to configure the maximum parallel requests by route and/or globally. Default is 10 as of now too
 * (Apollon77) Try to prevent crashes by socket errors
 
 ### 1.2.2 (2021-03-07)
 * (Apollon77) Fallback to "application/octet-stream" when mime type for a file could not be determined
-* (Apollon77) Cut filenames when looking them up in the filesystem if "?" or "#" are included 
+* (Apollon77) Cut filenames when looking them up in the filesystem if "?" or "#" are included
 
 ### 1.2.1 (2020-04-14)
 * (bluefox) Corrected error with access to local files

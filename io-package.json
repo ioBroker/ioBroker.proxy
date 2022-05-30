@@ -1,202 +1,166 @@
 {
-    "common": {
-        "name": "proxy",
-        "version": "1.2.2",
-        "news": {
-            "1.2.2": {
-                "en": "Fallback to \"application/octet-stream\" when mime type for a file could not be determined\nCut filenames when looking them up in the filesystem if \"?\" or \"#\" are included",
-                "de": "Fallback auf \"application / octet-stream\", wenn der MIME-Typ für eine Datei nicht ermittelt werden konnte\nSchneiden Sie Dateinamen aus, wenn Sie sie im Dateisystem nachschlagen, wenn \"?\" oder \"#\" sind enthalten",
-                "ru": "Возврат к «application / octet-stream», когда тип MIME для файла не может быть определен\nВырезайте имена файлов при поиске их в файловой системе, если \"?\" или \"#\" включены",
-                "pt": "Fallback de \"application / octet-stream\" quando o tipo MIME de um arquivo não puder ser determinado\nCorte os nomes dos arquivos ao procurá-los no sistema de arquivos se \"?\" ou \"#\" estão incluídos",
-                "nl": "Terugval op \"application / octet-stream\" wanneer het mime-type voor een bestand niet kon worden bepaald\nKnip bestandsnamen bij het opzoeken in het bestandssysteem als \"?\" of \"#\" zijn inbegrepen",
-                "fr": "Revenir à \"application / octet-stream\" lorsque le type mime d'un fichier n'a pas pu être déterminé\nCoupez les noms de fichiers lorsque vous les recherchez dans le système de fichiers si \"?\" ou \"#\" sont inclus",
-                "it": "Fallback a \"application / octet-stream\" quando non è stato possibile determinare il tipo MIME per un file\nTaglia i nomi dei file quando li cerchi nel filesystem se \"?\" o \"#\" sono inclusi",
-                "es": "Volver a \"application / octet-stream\" cuando no se pudo determinar el tipo de mime de un archivo\nCorte los nombres de archivo cuando los busque en el sistema de archivos si \"?\" o \"#\" están incluidos",
-                "pl": "Powrót do „application / octet-stream”, gdy nie można określić typu MIME dla pliku\nWytnij nazwy plików podczas wyszukiwania ich w systemie plików, jeśli \"?\" lub „#” są uwzględnione",
-                "zh-cn": "无法确定文件的哑剧类型时回退到“应用程序/八位字节流”\n如果在文件系统中查找文件名，则剪切文件名是否为“？”或包含“＃”"
-            },
-            "1.2.1": {
-                "en": "Corrected error with access to local files",
-                "de": "Fehler beim Zugriff auf lokale Dateien behoben",
-                "ru": "Исправлена ошибка с доступом к локальным файлам",
-                "pt": "Erro corrigido com o acesso a arquivos locais",
-                "nl": "Gecorrigeerde fout met toegang tot lokale bestanden",
-                "fr": "Erreur corrigée avec l'accès aux fichiers locaux",
-                "it": "Errore corretto con accesso ai file locali",
-                "es": "Error corregido con acceso a archivos locales",
-                "pl": "Poprawiony błąd dostępu do lokalnych plików",
-                "zh-cn": "纠正了对本地文件的访问错误"
-            },
-            "1.2.0": {
-                "en": "dependencies updated",
-                "de": "Abhängigkeiten aktualisiert",
-                "ru": "обновлены зависимости",
-                "pt": "dependências atualizadas",
-                "nl": "afhankelijkheden bijgewerkt",
-                "fr": "dépendances mises à jour",
-                "it": "dipendenze aggiornate",
-                "es": "dependencias actualizadas",
-                "pl": "zależności zaktualizowane",
-                "zh-cn": "依赖关系已更新"
-            },
-            "1.1.1": {
-                "en": "Implemented simple proxy to eliminate socket.io problem",
-                "de": "Implementierter einfacher Proxy, um das socket.io-Problem zu beseitigen",
-                "ru": "Реализован простой прокси для устранения проблемы socket.io",
-                "pt": "Implementado proxy simples para eliminar o problema do socket.io",
-                "nl": "Eenvoudige proxy geïmplementeerd om het socket.io-probleem te elimineren",
-                "fr": "Mise en œuvre de proxy simple pour éliminer le problème socket.io",
-                "it": "Implementato semplice proxy per eliminare il problema socket.io",
-                "es": "Implementado proxy simple para eliminar el problema de socket.io.",
-                "pl": "Zaimplementowano proste proxy w celu wyeliminowania problemu z socket.io",
-                "zh-cn": "实现简单代理以消除socket.io问题"
-            },
-            "1.0.3": {
-                "en": "Newer mime version used",
-                "de": "Neuere Mime-Version verwendet",
-                "ru": "Используется новая версия mime",
-                "pt": "Versão mais recente de mímica usada",
-                "nl": "Nieuwere mime-versie gebruikt",
-                "fr": "Nouvelle version mime utilisée",
-                "it": "È stata utilizzata la versione più recente di mimo",
-                "es": "Nueva versión mime utilizada",
-                "pl": "Zastosowano nowszą wersję mime",
-                "zh-cn": "使用了较新的 mime 版本"
-            },
-            "1.0.2": {
-                "en": "URI was decoded for usage of special chars in password and login",
-                "de": "URI wurde für die Verwendung spezieller Zeichen in Passwort und Login decodiert",
-                "ru": "URI был декодирован для использования специальных символов в пароле и логине",
-                "pt": "URI foi decodificado para uso de caracteres especiais em senha e login",
-                "nl": "URI is gedecodeerd voor het gebruik van speciale tekens in wachtwoord en aanmelding",
-                "fr": "URI a été décodé pour l'utilisation de caractères spéciaux dans le mot de passe et la connexion",
-                "it": "L'URI è stato decodificato per l'utilizzo di caratteri speciali in password e login",
-                "es": "El URI se decodificó para el uso de caracteres especiales en la contraseña y el inicio de sesión",
-                "pl": "Identyfikator URI został zdekodowany w celu użycia specjalnych znaków w haśle i logowaniu",
-                "zh-cn": "URI 被解码以在密码和登录中使用特殊字符"
-            },
-            "1.0.1": {
-                "en": "Fixed error: after 10 timeouts the web cam was never reachable\nReady for Admin3",
-                "de": "Fehler behoben: Nach 10 Timeouts war die Webcam nie erreichbar\nBereit für Admin3",
-                "ru": "Исправлена ​​ошибка: после 10 тайм-аутов веб-камера была недоступна\nГотово для Admin3",
-                "pt": "Erro corrigido: após 10 temporizações, a web cam nunca foi alcançada\nPronto para Admin3",
-                "nl": "Vaste fout: na 10 time-outs was de webcam nooit bereikbaar\nKlaar voor Admin3",
-                "fr": "Correction d'une erreur: après 10 timeouts, la webcam n'a jamais été accessible\nPrêt pour Admin3",
-                "it": "Risolto errore: dopo 10 timeout la web cam non era mai raggiungibile\nPronto per Admin3",
-                "es": "Error reparado: después de 10 tiempos de espera la cámara web nunca fue alcanzable\nListo para Admin3",
-                "pl": "Naprawiono błąd: po 10 przekroczeniach czasu kamera internetowa nigdy nie była dostępna\nGotowy na Admin3",
-                "zh-cn": "修复错误：在 10 次超时后，网络摄像头永远无法访问\n"
-            },
-            "1.0.0": {
-                "en": "do not allow the error generation to fast",
-                "de": "Erlaube nicht die Fehler zu oft zu generieren",
-                "ru": "Запрет на слишком частые ошибки запросов",
-                "pt": "não permita que a geração de erros seja rápida",
-                "nl": "laat het genereren van fouten niet snel",
-                "fr": "ne laissez pas la génération d'erreurs s'accélérer",
-                "it": "non consentire alla generazione dell'errore di accelerare",
-                "es": "no permita que la generación de errores sea rápida",
-                "pl": "nie pozwól na szybkie generowanie błędów",
-                "zh-cn": "不允许错误生成过快"
-            },
-            "0.2.0": {
-                "en": "fix run-mode",
-                "de": "Korrigiere Run-Modus",
-                "ru": "Исправлен режим запуска",
-                "pt": "corrigir o modo de execução",
-                "nl": "run-modus repareren",
-                "fr": "correction du mode d'exécution",
-                "it": "correggere la modalità di esecuzione",
-                "es": "corregir el modo de ejecución",
-                "pl": "napraw tryb uruchamiania",
-                "zh-cn": "修复运行模式"
-            },
-            "0.1.0": {
-                "en": "Inital version",
-                "de": "Erste Version",
-                "ru": "Первая версия",
-                "pt": "Versão inicial",
-                "nl": "Oorspronkelijke versie",
-                "fr": "Version initiale",
-                "it": "Versione iniziale",
-                "es": "Versión inicial",
-                "pl": "Wersja początkowa",
-                "zh-cn": "初始版本"
-            }
-        },
-        "title": "Proxy",
-        "titleLang": {
-            "en": "Proxy",
-            "de": "Proxy",
-            "ru": "Прокси",
-            "pt": "Procuração",
-            "nl": "Volmacht",
-            "fr": "Procuration",
-            "it": "procuratore",
-            "es": "Apoderado",
-            "pl": "Pełnomocnik",
-            "zh-cn": "代理人"
-        },
-        "desc": {
-            "en": "This adapter allows to reach other HTTP servers (like WEB CAM) in the same web server",
-            "de": "Dieser Adapter ermöglicht es, andere HTTP-Server (wie WEB CAM) auf demselben Webserver zu erreichen",
-            "ru": "Этот адаптер позволяет опрашивать другие HTTP-серверы (например, WEB CAM) на одном и том же веб-сервере",
-            "pt": "Este adaptador permite alcançar outros servidores HTTP (como WEB CAM) no mesmo servidor web",
-            "nl": "Met deze adapter kunnen andere HTTP-servers (zoals WEB CAM) op dezelfde webserver worden bereikt",
-            "fr": "Cet adaptateur permet d'atteindre d'autres serveurs HTTP (comme WEB CAM) sur le même serveur web",
-            "it": "Questo adattatore consente di raggiungere altri server HTTP (come WEB CAM) nello stesso server web",
-            "es": "Este adaptador permite llegar a otros servidores HTTP (como WEB CAM) en el mismo servidor web",
-            "pl": "Ten adapter umożliwia dotarcie do innych serwerów HTTP (takich jak WEB CAM) na tym samym serwerze internetowym",
-            "zh-cn": "此适配器允许访问同一Web服务器中的其他HTTP服务器（例如WEB CAM）"
-        },
-        "authors": [
-            "bluefox <dogafox@gmail.com>"
-        ],
-        "license": "MIT",
-        "platform": "Javascript/Node.js",
-        "mode": "extension",
-        "loglevel": "info",
-        "icon": "proxy.png",
-        "webExtension": "lib/proxy.js",
-        "readme": "https://github.com/ioBroker/ioBroker.proxy/blob/master/README.md",
-        "keywords": [
-            "web",
-            "proxy",
-            "communication"
-        ],
-        "materialize": true,
-        "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/admin/proxy.png",
-        "type": "network",
-        "dependencies": [
-            {
-                "js-controller": ">=2.0.0",
-                "web": ">=1.5.4"
-            }
-        ],
-        "connectionType": "none",
-        "dataSource": "none",
-        "tier": 3
+  "common": {
+    "name": "proxy",
+    "version": "1.3.0",
+    "news": {
+      "1.3.0": {
+        "en": "Allow to configure the maximum parallel requests by route and/or globally. Default is 10 as of now too\nTry to prevent crashes by socket errors",
+        "de": "Ermöglicht die Konfiguration der maximalen parallelen Anfragen nach Route und/oder global. Standard ist ab sofort auch 10\nVersuchen Sie Abstürze durch Socket-Fehler zu vermeiden",
+        "ru": "Разрешить настраивать максимальное количество параллельных запросов по маршруту и/или глобально. По умолчанию также 10 на данный момент\nПостарайтесь предотвратить сбои из-за ошибок сокетов",
+        "pt": "Permite configurar o máximo de solicitações paralelas por rota e/ou globalmente. O padrão é 10 a partir de agora também\nTente evitar travamentos por erros de soquete",
+        "nl": "Sta toe om de maximale parallelle verzoeken per route en/of globaal te configureren. Standaard is vanaf nu ook 10\nProbeer crashes door socketfouten te voorkomen",
+        "fr": "Permet de configurer le maximum de requêtes parallèles par route et/ou globalement. La valeur par défaut est 10 à partir de maintenant aussi\nEssayez d'éviter les plantages par des erreurs de socket",
+        "it": "Consentono di configurare il numero massimo di richieste parallele per route e/o globalmente. Il valore predefinito è 10 anche per ora\nCerca di prevenire arresti anomali causati da errori del socket",
+        "es": "Permitir configurar el máximo de peticiones paralelas por ruta y/o globalmente. El valor predeterminado es 10 a partir de ahora también\nTrate de evitar bloqueos por errores de socket",
+        "pl": "Pozwól skonfigurować maksymalną liczbę równoległych żądań według trasy i/lub globalnie. Na razie domyślna wartość to 10\nStaraj się zapobiegać awariom przez błędy gniazd",
+        "zh-cn": "允许通过路由和/或全局配置最大并行请求。现在默认也是 10\n尝试通过套接字错误防止崩溃"
+      },
+      "1.2.2": {
+        "en": "Fallback to \"application/octet-stream\" when mime type for a file could not be determined\nCut filenames when looking them up in the filesystem if \"?\" or \"#\" are included",
+        "de": "Fallback auf \"application / octet-stream\", wenn der MIME-Typ für eine Datei nicht ermittelt werden konnte\nSchneiden Sie Dateinamen aus, wenn Sie sie im Dateisystem nachschlagen, wenn \"?\" oder \"#\" sind enthalten",
+        "ru": "Возврат к «application / octet-stream», когда тип MIME для файла не может быть определен\nВырезайте имена файлов при поиске их в файловой системе, если \"?\" или \"#\" включены",
+        "pt": "Fallback de \"application / octet-stream\" quando o tipo MIME de um arquivo não puder ser determinado\nCorte os nomes dos arquivos ao procurá-los no sistema de arquivos se \"?\" ou \"#\" estão incluídos",
+        "nl": "Terugval op \"application / octet-stream\" wanneer het mime-type voor een bestand niet kon worden bepaald\nKnip bestandsnamen bij het opzoeken in het bestandssysteem als \"?\" of \"#\" zijn inbegrepen",
+        "fr": "Revenir à \"application / octet-stream\" lorsque le type mime d'un fichier n'a pas pu être déterminé\nCoupez les noms de fichiers lorsque vous les recherchez dans le système de fichiers si \"?\" ou \"#\" sont inclus",
+        "it": "Fallback a \"application / octet-stream\" quando non è stato possibile determinare il tipo MIME per un file\nTaglia i nomi dei file quando li cerchi nel filesystem se \"?\" o \"#\" sono inclusi",
+        "es": "Volver a \"application / octet-stream\" cuando no se pudo determinar el tipo de mime de un archivo\nCorte los nombres de archivo cuando los busque en el sistema de archivos si \"?\" o \"#\" están incluidos",
+        "pl": "Powrót do „application / octet-stream”, gdy nie można określić typu MIME dla pliku\nWytnij nazwy plików podczas wyszukiwania ich w systemie plików, jeśli \"?\" lub „#” są uwzględnione",
+        "zh-cn": "无法确定文件的哑剧类型时回退到“应用程序/八位字节流”\n如果在文件系统中查找文件名，则剪切文件名是否为“？”或包含“＃”"
+      },
+      "1.2.1": {
+        "en": "Corrected error with access to local files",
+        "de": "Fehler beim Zugriff auf lokale Dateien behoben",
+        "ru": "Исправлена ошибка с доступом к локальным файлам",
+        "pt": "Erro corrigido com o acesso a arquivos locais",
+        "nl": "Gecorrigeerde fout met toegang tot lokale bestanden",
+        "fr": "Erreur corrigée avec l'accès aux fichiers locaux",
+        "it": "Errore corretto con accesso ai file locali",
+        "es": "Error corregido con acceso a archivos locales",
+        "pl": "Poprawiony błąd dostępu do lokalnych plików",
+        "zh-cn": "纠正了对本地文件的访问错误"
+      },
+      "1.2.0": {
+        "en": "dependencies updated",
+        "de": "Abhängigkeiten aktualisiert",
+        "ru": "обновлены зависимости",
+        "pt": "dependências atualizadas",
+        "nl": "afhankelijkheden bijgewerkt",
+        "fr": "dépendances mises à jour",
+        "it": "dipendenze aggiornate",
+        "es": "dependencias actualizadas",
+        "pl": "zależności zaktualizowane",
+        "zh-cn": "依赖关系已更新"
+      },
+      "1.1.1": {
+        "en": "Implemented simple proxy to eliminate socket.io problem",
+        "de": "Implementierter einfacher Proxy, um das socket.io-Problem zu beseitigen",
+        "ru": "Реализован простой прокси для устранения проблемы socket.io",
+        "pt": "Implementado proxy simples para eliminar o problema do socket.io",
+        "nl": "Eenvoudige proxy geïmplementeerd om het socket.io-probleem te elimineren",
+        "fr": "Mise en œuvre de proxy simple pour éliminer le problème socket.io",
+        "it": "Implementato semplice proxy per eliminare il problema socket.io",
+        "es": "Implementado proxy simple para eliminar el problema de socket.io.",
+        "pl": "Zaimplementowano proste proxy w celu wyeliminowania problemu z socket.io",
+        "zh-cn": "实现简单代理以消除socket.io问题"
+      },
+      "1.0.3": {
+        "en": "Newer mime version used",
+        "de": "Neuere Mime-Version verwendet",
+        "ru": "Используется новая версия mime",
+        "pt": "Versão mais recente de mímica usada",
+        "nl": "Nieuwere mime-versie gebruikt",
+        "fr": "Nouvelle version mime utilisée",
+        "it": "È stata utilizzata la versione più recente di mimo",
+        "es": "Nueva versión mime utilizada",
+        "pl": "Zastosowano nowszą wersję mime",
+        "zh-cn": "使用了较新的 mime 版本"
+      },
+      "1.0.2": {
+        "en": "URI was decoded for usage of special chars in password and login",
+        "de": "URI wurde für die Verwendung spezieller Zeichen in Passwort und Login decodiert",
+        "ru": "URI был декодирован для использования специальных символов в пароле и логине",
+        "pt": "URI foi decodificado para uso de caracteres especiais em senha e login",
+        "nl": "URI is gedecodeerd voor het gebruik van speciale tekens in wachtwoord en aanmelding",
+        "fr": "URI a été décodé pour l'utilisation de caractères spéciaux dans le mot de passe et la connexion",
+        "it": "L'URI è stato decodificato per l'utilizzo di caratteri speciali in password e login",
+        "es": "El URI se decodificó para el uso de caracteres especiales en la contraseña y el inicio de sesión",
+        "pl": "Identyfikator URI został zdekodowany w celu użycia specjalnych znaków w haśle i logowaniu",
+        "zh-cn": "URI 被解码以在密码和登录中使用特殊字符"
+      }
     },
-    "native": {
-        "route": "",
-        "webInstance": "",
-        "errorTimeout": 10000,
-        "simpleProxy": false,
-        "parallelRequests": 10,
-        "rules": [
-            {
-                "regex": "sonos/",
-                "url": "http://localhost:8083"
-            },
-            {
-                "regex": "api/",
-                "url": "http://localhost:8084"
-            },
-            {
-                "regex": "node-red/",
-                "url": "http://localhost:1880"
-            }
-        ]
-    }
+    "title": "Proxy",
+    "titleLang": {
+      "en": "Proxy",
+      "de": "Proxy",
+      "ru": "Прокси",
+      "pt": "Procuração",
+      "nl": "Volmacht",
+      "fr": "Procuration",
+      "it": "procuratore",
+      "es": "Apoderado",
+      "pl": "Pełnomocnik",
+      "zh-cn": "代理人"
+    },
+    "desc": {
+      "en": "This adapter allows to reach other HTTP servers (like WEB CAM) in the same web server",
+      "de": "Dieser Adapter ermöglicht es, andere HTTP-Server (wie WEB CAM) auf demselben Webserver zu erreichen",
+      "ru": "Этот адаптер позволяет опрашивать другие HTTP-серверы (например, WEB CAM) на одном и том же веб-сервере",
+      "pt": "Este adaptador permite alcançar outros servidores HTTP (como WEB CAM) no mesmo servidor web",
+      "nl": "Met deze adapter kunnen andere HTTP-servers (zoals WEB CAM) op dezelfde webserver worden bereikt",
+      "fr": "Cet adaptateur permet d'atteindre d'autres serveurs HTTP (comme WEB CAM) sur le même serveur web",
+      "it": "Questo adattatore consente di raggiungere altri server HTTP (come WEB CAM) nello stesso server web",
+      "es": "Este adaptador permite llegar a otros servidores HTTP (como WEB CAM) en el mismo servidor web",
+      "pl": "Ten adapter umożliwia dotarcie do innych serwerów HTTP (takich jak WEB CAM) na tym samym serwerze internetowym",
+      "zh-cn": "此适配器允许访问同一Web服务器中的其他HTTP服务器（例如WEB CAM）"
+    },
+    "authors": [
+      "bluefox <dogafox@gmail.com>"
+    ],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "mode": "extension",
+    "loglevel": "info",
+    "icon": "proxy.png",
+    "webExtension": "lib/proxy.js",
+    "readme": "https://github.com/ioBroker/ioBroker.proxy/blob/master/README.md",
+    "keywords": [
+      "web",
+      "proxy",
+      "communication"
+    ],
+    "materialize": true,
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/admin/proxy.png",
+    "type": "network",
+    "dependencies": [
+      {
+        "js-controller": ">=2.0.0",
+        "web": ">=1.5.4"
+      }
+    ],
+    "connectionType": "none",
+    "dataSource": "none",
+    "tier": 3
+  },
+  "native": {
+    "route": "",
+    "webInstance": "",
+    "errorTimeout": 10000,
+    "simpleProxy": false,
+    "parallelRequests": 10,
+    "rules": [
+      {
+        "regex": "sonos/",
+        "url": "http://localhost:8083"
+      },
+      {
+        "regex": "api/",
+        "url": "http://localhost:8084"
+      },
+      {
+        "regex": "node-red/",
+        "url": "http://localhost:1880"
+      }
+    ]
+  }
 }

@@ -1,6 +1,6 @@
 {
   "name": "iobroker.proxy",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "description": "Proxy for WEB server.",
   "author": {
     "name": "bluefox",
