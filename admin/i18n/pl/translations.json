@@ -2,6 +2,7 @@
     "Context": "Kontekst",
     "Error timeout(ms):": "Błąd limitu czasu (ms)",
     "Extend WEB adapter:": "Przedłuż adapter WEB",
+    "Maximum Parallel Requests": "Maksymalna liczba żądań równoległych",
     "Paths": "Ścieżki",
     "Proxy adapter settings": "Ustawienia adaptera proxy",
     "Route path:": "Ścieżka trasy",

@@ -2,6 +2,7 @@
     "Context": "内容",
     "Error timeout(ms):": "错误超时（毫秒）",
     "Extend WEB adapter:": "扩展WEB适配器",
+    "Maximum Parallel Requests": "最大并行请求",
     "Paths": "路径",
     "Proxy adapter settings": "代理适配器设置",
     "Route path:": "路线路径",

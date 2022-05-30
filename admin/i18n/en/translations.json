@@ -2,6 +2,7 @@
     "Context": "Context",
     "Error timeout(ms):": "Error timeout (ms)",
     "Extend WEB adapter:": "Use as web adapter extension",
+    "Maximum Parallel Requests": "Maximum Parallel Requests",
     "Paths": "Paths",
     "Proxy adapter settings": "Proxy adapter settings",
     "Route path:": "Route path",

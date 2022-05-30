@@ -2,6 +2,7 @@
     "Context": "Контекст",
     "Error timeout(ms):": "Тайм-аут ошибки (мс)",
     "Extend WEB adapter:": "Использовать, как расширение web-драйвера",
+    "Maximum Parallel Requests": "Максимальное количество параллельных запросов",
     "Paths": "пути",
     "Proxy adapter settings": "Настройки Proxy драйвера",
     "Route path:": "Путь в URL",

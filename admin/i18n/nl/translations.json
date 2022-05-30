@@ -2,6 +2,7 @@
     "Context": "verband",
     "Error timeout(ms):": "Fout-time-out (ms)",
     "Extend WEB adapter:": "Breid WEB-adapter uit",
+    "Maximum Parallel Requests": "Maximum aantal parallelle verzoeken",
     "Paths": "Paths",
     "Proxy adapter settings": "Proxy-adapterinstellingen",
     "Route path:": "Route pad",

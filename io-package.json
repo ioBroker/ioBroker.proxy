@@ -60,7 +60,8 @@
                 "fr": "Nouvelle version mime utilisée",
                 "it": "È stata utilizzata la versione più recente di mimo",
                 "es": "Nueva versión mime utilizada",
-                "pl": "Zastosowano nowszą wersję mime"
+                "pl": "Zastosowano nowszą wersję mime",
+                "zh-cn": "使用了较新的 mime 版本"
             },
             "1.0.2": {
                 "en": "URI was decoded for usage of special chars in password and login",
@@ -71,7 +72,8 @@
                 "fr": "URI a été décodé pour l'utilisation de caractères spéciaux dans le mot de passe et la connexion",
                 "it": "L'URI è stato decodificato per l'utilizzo di caratteri speciali in password e login",
                 "es": "El URI se decodificó para el uso de caracteres especiales en la contraseña y el inicio de sesión",
-                "pl": "Identyfikator URI został zdekodowany w celu użycia specjalnych znaków w haśle i logowaniu"
+                "pl": "Identyfikator URI został zdekodowany w celu użycia specjalnych znaków w haśle i logowaniu",
+                "zh-cn": "URI 被解码以在密码和登录中使用特殊字符"
             },
             "1.0.1": {
                 "en": "Fixed error: after 10 timeouts the web cam was never reachable\nReady for Admin3",
@@ -82,25 +84,59 @@
                 "fr": "Correction d'une erreur: après 10 timeouts, la webcam n'a jamais été accessible\nPrêt pour Admin3",
                 "it": "Risolto errore: dopo 10 timeout la web cam non era mai raggiungibile\nPronto per Admin3",
                 "es": "Error reparado: después de 10 tiempos de espera la cámara web nunca fue alcanzable\nListo para Admin3",
-                "pl": "Naprawiono błąd: po 10 przekroczeniach czasu kamera internetowa nigdy nie była dostępna\nGotowy na Admin3"
+                "pl": "Naprawiono błąd: po 10 przekroczeniach czasu kamera internetowa nigdy nie była dostępna\nGotowy na Admin3",
+                "zh-cn": "修复错误：在 10 次超时后，网络摄像头永远无法访问\n"
             },
             "1.0.0": {
                 "en": "do not allow the error generation to fast",
                 "de": "Erlaube nicht die Fehler zu oft zu generieren",
-                "ru": "Запрет на слишком частые ошибки запросов"
+                "ru": "Запрет на слишком частые ошибки запросов",
+                "pt": "não permita que a geração de erros seja rápida",
+                "nl": "laat het genereren van fouten niet snel",
+                "fr": "ne laissez pas la génération d'erreurs s'accélérer",
+                "it": "non consentire alla generazione dell'errore di accelerare",
+                "es": "no permita que la generación de errores sea rápida",
+                "pl": "nie pozwól na szybkie generowanie błędów",
+                "zh-cn": "不允许错误生成过快"
             },
             "0.2.0": {
                 "en": "fix run-mode",
                 "de": "Korrigiere Run-Modus",
-                "ru": "Исправлен режим запуска"
+                "ru": "Исправлен режим запуска",
+                "pt": "corrigir o modo de execução",
+                "nl": "run-modus repareren",
+                "fr": "correction du mode d'exécution",
+                "it": "correggere la modalità di esecuzione",
+                "es": "corregir el modo de ejecución",
+                "pl": "napraw tryb uruchamiania",
+                "zh-cn": "修复运行模式"
             },
             "0.1.0": {
                 "en": "Inital version",
                 "de": "Erste Version",
-                "ru": "Первая версия"
+                "ru": "Первая версия",
+                "pt": "Versão inicial",
+                "nl": "Oorspronkelijke versie",
+                "fr": "Version initiale",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Wersja początkowa",
+                "zh-cn": "初始版本"
             }
         },
-        "title": "proxy",
+        "title": "Proxy",
+        "titleLang": {
+            "en": "Proxy",
+            "de": "Proxy",
+            "ru": "Прокси",
+            "pt": "Procuração",
+            "nl": "Volmacht",
+            "fr": "Procuration",
+            "it": "procuratore",
+            "es": "Apoderado",
+            "pl": "Pełnomocnik",
+            "zh-cn": "代理人"
+        },
         "desc": {
             "en": "This adapter allows to reach other HTTP servers (like WEB CAM) in the same web server",
             "de": "Dieser Adapter ermöglicht es, andere HTTP-Server (wie WEB CAM) auf demselben Webserver zu erreichen",
@@ -137,13 +173,17 @@
                 "js-controller": ">=2.0.0",
                 "web": ">=1.5.4"
             }
-        ]
+        ],
+        "connectionType": "none",
+        "dataSource": "none",
+        "tier": 3
     },
     "native": {
         "route": "",
         "webInstance": "",
         "errorTimeout": 10000,
         "simpleProxy": false,
+        "parallelRequests": 10,
         "rules": [
             {
                 "regex": "sonos/",

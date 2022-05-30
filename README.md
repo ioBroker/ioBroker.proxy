@@ -39,6 +39,7 @@ Additionally the user can define the route path for proxy requests.
 ## Changelog
 
 ### __WORK IN PROGRESS__
+* (Apollon77) Allow to configure the maximum parallel requests by route and/or globally. Default is 10 as of now too
 * (Apollon77) Try to prevent crashes by socket errors
 
 ### 1.2.2 (2021-03-07)
@@ -76,7 +77,7 @@ Additionally the user can define the route path for proxy requests.
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2017-2020 bluefox <dogafox@gmail.com>
+Copyright (c) 2017-2022 bluefox <dogafox@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

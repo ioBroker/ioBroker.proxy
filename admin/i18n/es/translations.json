@@ -2,6 +2,7 @@
     "Context": "Contexto",
     "Error timeout(ms):": "Tiempo de espera de error (ms)",
     "Extend WEB adapter:": "Extender el adaptador WEB",
+    "Maximum Parallel Requests": "Solicitudes paralelas máximas",
     "Paths": "Caminos",
     "Proxy adapter settings": "Configuración del adaptador proxy",
     "Route path:": "Ruta de la ruta",

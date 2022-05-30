@@ -2,6 +2,7 @@
     "Context": "Kontext",
     "Error timeout(ms):": "Fehler-Timeout (ms)",
     "Extend WEB adapter:": "Als Web-Adapter-Erweiterung nutzen",
+    "Maximum Parallel Requests": "Maximale parallele Anfragen",
     "Paths": "Pfade",
     "Proxy adapter settings": "Proxy Adapter Einstellungen",
     "Route path:": "Routenpfad",
