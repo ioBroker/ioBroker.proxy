@@ -37,6 +37,10 @@ You can read more about context [here](https://www.npmjs.com/package/http-proxy-
 Additionally the user can define the route path for proxy requests.
 
 ## Changelog
+
+### __WORK IN PROGRESS__
+* (Apollon77) Revert the automatic WS upgrade call added in 1.3.0 because produced sometimes issues with websocket connections
+
 ### 1.3.0 (2022-05-30)
 * (Apollon77) Allow to configure the maximum parallel requests by route and/or globally. Default is 10 as of now too
 * (Apollon77) Try to prevent crashes by socket errors
