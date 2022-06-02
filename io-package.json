@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "proxy",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "news": {
+      "1.3.1": {
+        "en": "Revert the automatic WS upgrade call added in 1.3.0 because produced sometimes issues with websocket connections",
+        "de": "Setzen Sie den in 1.3.0 hinzugefügten automatischen WS-Upgrade-Aufruf zurück, da es manchmal zu Problemen mit Websocket-Verbindungen kam",
+        "ru": "Отменить автоматический вызов обновления WS, добавленный в 1.3.0, поскольку иногда возникали проблемы с подключениями через веб-сокет.",
+        "pt": "Reverta a chamada de atualização automática do WS adicionada em 1.3.0 porque às vezes produzia problemas com conexões websocket",
+        "nl": "Zet de automatische WS-upgrade-aanroep terug die is toegevoegd in 1.3.0 omdat er soms problemen waren met websocket-verbindingen",
+        "fr": "Rétablir l'appel de mise à niveau automatique de WS ajouté dans la version 1.3.0 car il produisait parfois des problèmes avec les connexions Websocket",
+        "it": "Ripristinare la chiamata di aggiornamento WS automatica aggiunta in 1.3.0 perché a volte produceva problemi con le connessioni websocket",
+        "es": "Revertir la llamada de actualización automática de WS agregada en 1.3.0 porque a veces producía problemas con las conexiones websocket",
+        "pl": "Cofnij automatyczne wywołanie aktualizacji WS dodane w wersji 1.3.0, ponieważ czasami pojawiają się problemy z połączeniami z gniazdami sieciowymi",
+        "zh-cn": "恢复 1.3.0 中添加的自动 WS 升级调用，因为有时会产生 websocket 连接问题"
+      },
       "1.3.0": {
         "en": "Allow to configure the maximum parallel requests by route and/or globally. Default is 10 as of now too\nTry to prevent crashes by socket errors",
         "de": "Ermöglicht die Konfiguration der maximalen parallelen Anfragen nach Route und/oder global. Standard ist ab sofort auch 10\nVersuchen Sie Abstürze durch Socket-Fehler zu vermeiden",
@@ -74,18 +86,6 @@
         "es": "Nueva versión mime utilizada",
         "pl": "Zastosowano nowszą wersję mime",
         "zh-cn": "使用了较新的 mime 版本"
-      },
-      "1.0.2": {
-        "en": "URI was decoded for usage of special chars in password and login",
-        "de": "URI wurde für die Verwendung spezieller Zeichen in Passwort und Login decodiert",
-        "ru": "URI был декодирован для использования специальных символов в пароле и логине",
-        "pt": "URI foi decodificado para uso de caracteres especiais em senha e login",
-        "nl": "URI is gedecodeerd voor het gebruik van speciale tekens in wachtwoord en aanmelding",
-        "fr": "URI a été décodé pour l'utilisation de caractères spéciaux dans le mot de passe et la connexion",
-        "it": "L'URI è stato decodificato per l'utilizzo di caratteri speciali in password e login",
-        "es": "El URI se decodificó para el uso de caracteres especiales en la contraseña y el inicio de sesión",
-        "pl": "Identyfikator URI został zdekodowany w celu użycia specjalnych znaków w haśle i logowaniu",
-        "zh-cn": "URI 被解码以在密码和登录中使用特殊字符"
       }
     },
     "title": "Proxy",
