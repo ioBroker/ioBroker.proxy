@@ -37,6 +37,9 @@ You can read more about context [here](https://www.npmjs.com/package/http-proxy-
 Additionally the user can define the route path for proxy requests.
 
 ## Changelog
+### __WORK IN PROGRESS__
+* (Apollon77) Allow to also proxy files directly
+
 ### 1.3.1 (2022-06-02)
 * (Apollon77) Revert the automatic WS upgrade call added in 1.3.0 because produced sometimes issues with websocket connections
 
