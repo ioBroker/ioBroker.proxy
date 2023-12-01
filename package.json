@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "http-proxy-middleware": "^2.0.6",
-    "mime": "^3.0.0",
+    "mime": "^4.0.0",
     "@iobroker/adapter-core": "^2.6.7",
     "request": "^2.88.2"
   },
