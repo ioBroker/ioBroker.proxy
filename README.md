@@ -79,6 +79,8 @@ Additionally the user can define the route path for proxy requests.
 ### 0.0.1 (2017-01-09)
 * (bluefox) initial commit
 
+[Older changelogs can be found there](CHANGELOG_OLD.md)
+
 ## License
 The MIT License (MIT)
 
