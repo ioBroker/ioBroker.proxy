@@ -128,19 +128,21 @@
       "proxy",
       "communication"
     ],
-    "materialize": true,
     "enabled": true,
     "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/admin/proxy.png",
     "type": "network",
     "dependencies": [
       {
-        "js-controller": ">=2.0.0",
+        "js-controller": ">=6.0.11",
         "web": ">=1.5.4"
       }
     ],
     "connectionType": "none",
     "dataSource": "none",
-    "tier": 3
+    "tier": 3,
+    "adminUI": {
+      "config": "materialize"
+    }
   },
   "native": {
     "route": "",
