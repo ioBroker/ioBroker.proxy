@@ -130,7 +130,6 @@
       "proxy",
       "communication"
     ],
-    "materialize": true,
     "enabled": true,
     "extIcon": "https://raw.githubusercontent.com/ioBroker/ioBroker.proxy/master/admin/proxy.png",
     "type": "network",
@@ -142,7 +141,10 @@
     ],
     "connectionType": "none",
     "dataSource": "none",
-    "tier": 3
+    "tier": 3,
+    "adminUI": {
+      "config": "materialize"
+    }
   },
   "native": {
     "route": "",
