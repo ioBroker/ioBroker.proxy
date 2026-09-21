@@ -37,6 +37,10 @@ You can read more about context [here](https://www.npmjs.com/package/http-proxy-
 Additionally the user can define the route path for proxy requests.
 
 ## Changelog
+
+### **WORK IN PROGRESS**
+- (ioBroker-Bot) Adapter requires js-controller >= 6.0.11 now.
+
 ### 1.3.2 (2022-10-01)
 * (Apollon77) Allow to also proxy files directly
 
