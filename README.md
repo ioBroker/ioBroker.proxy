@@ -40,7 +40,7 @@ Additionally the user can define the route path for proxy requests.
 
 ### **WORK IN PROGRESS**
 - (ioBroker-Bot) Adapter requires js-controller >= 6.0.11 now.
-- (ipod86) Credentials from the rule URL are masked in the log and the proxy options are logged at debug level only (#276)
+- (ipod86) Credentials are masked in all log lines (`user:pass@` and query parameters like `password`, `user`, `token`, `apikey`); the proxy options are logged at debug level only (#276)
 
 ### 1.3.2 (2022-10-01)
 * (Apollon77) Allow to also proxy files directly
