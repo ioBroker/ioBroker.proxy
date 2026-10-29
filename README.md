@@ -40,6 +40,7 @@ Additionally the user can define the route path for proxy requests.
 
 ### **WORK IN PROGRESS**
 - (ioBroker-Bot) Adapter requires js-controller >= 6.0.11 now.
+- (@GermanBluefox) Credentials from rule URLs are no longer written to the log (#276)
 
 ### 1.3.2 (2022-10-01)
 * (Apollon77) Allow to also proxy files directly
