@@ -329,7 +329,7 @@ class ProxyExtension {
         rule.url = rule.url.replace(/\\/g, '/');
         if (rule.url[0] !== '/' && !rule.url.match(/^[A-Za-z]:/)) {
             // Relative paths are relative to the node_modules directory (the code was in node_modules/iobroker.proxy/lib/).
-            // The README says "relative to the ioBroker directory", but this is how it always worked.
+            // Keep it like that, existing configurations rely on it (documented in the README).
             rule.url = normalize(`${__dirname}/../../../${rule.url}`);
         }
 
