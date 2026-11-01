@@ -39,8 +39,8 @@ Additionally the user can define the route path for proxy requests.
 ## Changelog
 
 ### **WORK IN PROGRESS**
-- (bluefox) **Breaking change:** Node.js >= 22.19 and admin >= 7.0.0 are required now
-- (bluefox) The adapter was refactored to TypeScript and JsonConfig; `request` was replaced by `axios`
+- (bluefox) **Breaking change:** Node.js >= 22.19 and admin >= 7.6.20 are required now
+- (bluefox) The adapter was refactored to TypeScript and JsonConfig; `request` was replaced by `axios` and `mime` by `mime-types`
 - (bluefox) Fixed: files outside of a configured local directory could be read via ".." in the path
 - (bluefox) Fixed: the timeout check was not stopped when web unloaded the extension
 - (ioBroker-Bot) Adapter requires js-controller >= 6.0.11 now.

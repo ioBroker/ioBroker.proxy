@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-ioBroker adapter `proxy` (npm `iobroker.proxy`, TypeScript in `src/`, compiled to `build/`). It is a pure **web extension** (`common.mode: "extension"`): there is no own process and no `main.ts`. The web adapter instance named in `native.webInstance` (or `*` for all) loads `common.webExtension` = `build/lib/proxy.js` and calls `new ProxyExtension(server, webSettings, webAdapter, proxyInstanceObject, expressApp)`. The extension mounts one express route per rule below `/<native.route>` (default `proxy.<instance>/`) and forwards to HTTP(S) targets or serves local files. Node >= 22.19, js-controller >= 6.0.11, admin >= 7.0.0, web >= 1.5.4.
+ioBroker adapter `proxy` (npm `iobroker.proxy`, TypeScript in `src/`, compiled to `build/`). It is a pure **web extension** (`common.mode: "extension"`): there is no own process and no `main.ts`. The web adapter instance named in `native.webInstance` (or `*` for all) loads `common.webExtension` = `build/lib/proxy.js` and calls `new ProxyExtension(server, webSettings, webAdapter, proxyInstanceObject, expressApp)`. The extension mounts one express route per rule below `/<native.route>` (default `proxy.<instance>/`) and forwards to HTTP(S) targets or serves local files. Node >= 22.19, js-controller >= 6.0.11, admin >= 7.6.20, web >= 1.5.4.
 
 ## Commands
 
@@ -14,11 +14,12 @@ npm run check          # type-check only
 npm run lint           # @iobroker/eslint-config incl. prettier; fix with: npx eslint -c eslint.config.mjs --fix src
 npm test               # test:package + test:unit
 npm run test:unit      # mocha test/unitProxy - runs against build/, so build first
+npm run test:integration  # starts the module in a temporary js-controller (see below)
 npm run translate      # translate-adapter -b admin/i18n/en.json
 npm run release-minor  # @alcalzone/release-script (README changelog, io-package news, LICENSE year)
 ```
 
-Single test: `npx mocha test/unitProxy --exit -g "simple proxy"`. Tests use `node:assert`, no chai. `test/unitProxy.js` uses a tiny fake express app (`use` with prefix match, `status`/`send`/`set`/`contentType`) and a fake web adapter, plus real local HTTP servers as targets. There is no integration test: an extension-only adapter cannot be started by the testing harness. No `prepare` script on purpose: `npm ci` does not build, CI builds via `build: true` in the ioBroker GitHub actions.
+Single test: `npx mocha test/unitProxy --exit -g "simple proxy"`. Tests use `node:assert`, no chai. `test/unitProxy.js` uses a tiny fake express app (`use` with prefix match, `status`/`send`/`set`/`contentType`) and a fake web adapter, plus real local HTTP servers as targets. `test/integrationAdapter.js` only exists because `ioBroker/testing-action-adapter` always runs `npm run test:integration`: an extension-only adapter is never started as an own process, so `build/lib/proxy.js` exits with 0 at once (`allowedExitCodes: [0]`). It aborts locally if a js-controller is already running. No `prepare` script on purpose: `npm ci` does not build, CI builds via `build: true` in the ioBroker GitHub actions.
 
 ## Architecture
 
@@ -30,10 +31,13 @@ Single test: `npx mocha test/unitProxy --exit -g "simple proxy"`. Tests use `nod
 - `src/lib/types.ts` - minimal express request/response/app interfaces and the runtime `ProxyRule` (config + `request`, `lastError*`, `handler`). The config objects themselves are not mutated.
 - `adapter` passed to the extension is the **web** adapter, `instanceSettings` is this proxy instance.
 
-Adding a config option: `io-package.json` `native` (default), `src/lib/adapter-config.d.ts`, `admin/jsonConfig.json`, and the label in all 10 `admin/i18n/<lang>.json` files - keep the key sets identical, otherwise saving the config drops values. `native.route` = `""` means `proxy.<instance>/` (the old admin stored the default as empty string).
+Adding a config option: `io-package.json` `native` (default), `src/lib/adapter-config.d.ts`, `admin/jsonConfig.json`, and the label in all 11 `admin/i18n/<lang>.json` files - keep the key sets identical, otherwise saving the config drops values. `native.route` = `""` means `proxy.<instance>/` (the old admin stored the default as empty string).
 
 ## Conventions
 
 - Behavior of the proxy must stay compatible: rule fields (`regex`, `url`, `timeout`, `parallelRequests`), status codes and error texts are relied on by existing installations.
 - Don't edit `common.news` or the version by hand; add changelog lines under `### **WORK IN PROGRESS**` in README.md.
 - `@types/express` (v4) is only needed because the typings of http-proxy-middleware v2 import it.
+- `@iobroker/adapter-core` is deliberately no dependency: the extension never imports it, it gets the web adapter object. ioBroker types come from `@iobroker/types`.
+- MIME types of local files come from `mime-types` (`lookup(extension) || 'application/octet-stream'`).
+- Repository checker findings are tracked in issue #271.
