@@ -175,6 +175,20 @@ describe('ProxyExtension', () => {
             assert.strictEqual(res.status, 404);
         });
 
+        it('should not deliver files outside of the configured directory', async () => {
+            await start({ rules: [{ regex: 'dir/', url: `${join(dir, 'sub')}/` }] });
+            // fetch() and URL strings would normalize "..", so send the path as is
+            const status = await new Promise((resolve, reject) =>
+                get({ host: '127.0.0.1', port: web.address().port, path: '/proxy.0/dir/../a.json' }, res => {
+                    res.resume();
+                    resolve(res.statusCode);
+                }).on('error', reject),
+            );
+            assert.strictEqual(status, 403);
+            const res = await fetch(`${webUrl}/proxy.0/dir/b.txt`);
+            assert.strictEqual(await res.text(), 'b');
+        });
+
         it('should deliver a single file and use the route without leading slash', async () => {
             await start({ route: '/files/', rules: [{ regex: 'b.txt', url: join(dir, 'sub', 'b.txt') }] });
             const res = await fetch(`${webUrl}/files/b.txt`);

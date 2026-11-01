@@ -1,6 +1,6 @@
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import type { Server } from 'node:http';
-import { extname, normalize } from 'node:path';
+import { extname, isAbsolute, normalize, relative } from 'node:path';
 
 import axios, { type AxiosResponse, type RawAxiosRequestHeaders } from 'axios';
 import { createProxyMiddleware, type Options } from 'http-proxy-middleware';
@@ -351,6 +351,13 @@ class ProxyExtension {
             this.adapter.log.debug(
                 `[proxy] File lookup for ${this.route}${rule.regex}: rule.req=${rule.url}, requestUrl=${requestUrl}, fileName=${fileName}`,
             );
+            // express does not normalize "..", so a raw request could leave the configured path
+            const relativeName = relative(rule.url, fileName);
+            if (/^\.\.([\\/]|$)/.test(relativeName) || isAbsolute(relativeName)) {
+                res.status(403).send('[proxy] Forbidden');
+                this.adapter.log.warn(`[proxy] Access to "${fileName}" outside of "${rule.url}" denied`);
+                return;
+            }
             if (existsSync(fileName)) {
                 const stat = statSync(fileName);
                 if (stat.isDirectory()) {
