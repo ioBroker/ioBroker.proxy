@@ -13,29 +13,29 @@ Allows to access defined URLs or local files via one web server.
 Specified routes will be available under `http://ip:8082/proxy.0/context/...`. Of course port, protocol, `proxy.0`, can variate depends on settings.
 
 ## Configuration
-- Extend WEB adapter: For which web instance will active this proxy.
+- Extend WEB adapter: For which web instance will activate this proxy.
 - Route path: Path for proxy. If "/proxy.0", so the routes will be available under `http://webIP:8082/proxy.0/...`
   Empty means `proxy.<instance>/`. Set it to `/` to install the routes directly below the root of the web server, e.g. a context `.well-known/acme-challenge/` is then available under `http://webIP:8082/.well-known/acme-challenge/...`
 - Error timeout(ms): Minimal interval between retries if the requested resource was unavailable or returned error.
 - Use simple proxy: in this case the very simple but robust method will be used. It is not suitable for web sockets or POST request. Use this method if you have some issues with WEB Instance or socket.io communication.  
 
 ## Sample settings
-| Context        |      URL                                           |      Description                                   |
-|----------------|:---------------------------------------------------|:---------------------------------------------------|
-| admin/         | http://localhost:8081                              | access to admin page                               |
-| router/        | http://192.168.1.1                                 | access to local router                             |
-| cam/           | http://user:pass@192.168.1.123                     | access to webcam (e.g. call http://ip:8082/proxy.0/cam/web/snapshot.jpg) |
-| dir/           | /tmp/                                              | access to local directory "/tmp/"                  |
-| dir/           | tmp/                                               | access to local directory "/opt/iobroker/tmp"      |
-| file.jpg       | /tmp/picture.jpg                                   | access to local file "/tmp/picture.jpg"            |
+| Context  | URL                            | Description                                                              |
+|----------|--------------------------------|--------------------------------------------------------------------------|
+| admin/   | http://localhost:8081          | access to admin page                                                     |
+| router/  | http://192.168.1.1             | access to local router                                                   |
+| cam/     | http://user:pass@192.168.1.123 | access to webcam (e.g. call http://ip:8082/proxy.0/cam/web/snapshot.jpg) |
+| dir/     | /tmp/                          | access to local directory "/tmp/"                                        |
+| dir/     | tmp/                           | access to local directory "/opt/iobroker/tmp"                            |
+| file.jpg | /tmp/picture.jpg               | access to local file "/tmp/picture.jpg"                                  |
 
 **Not all devices can be accessed via proxy.** 
 
-Some devices wants to be located in the root `http://ip/` and cannot run under `http://ip/proxy.0/context/`.
+Some devices want to be located in the root `http://ip/` and cannot run under `http://ip/proxy.0/context/`.
 
 You can read more about context [here](https://www.npmjs.com/package/http-proxy-middleware#context-matching)
 
-Additionally the user can define the route path for proxy requests.
+Additionally, the user can define the route path for proxy requests.
 
 ## Changelog
 
@@ -78,7 +78,7 @@ Additionally the user can define the route path for proxy requests.
 * (bluefox) URI was decoded for usage of special chars in password and login
 
 ### 1.0.1 (2018-03-01)
-* (bluefox) Fixed error: after 10 timeouts the web cam was never reachable
+* (bluefox) Fixed error: after 10 timeouts the webcam was never reachable
 * (bluefox) Ready for Admin3
 
 ### 1.0.0 (2017-10-09)
