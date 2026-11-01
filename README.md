@@ -41,6 +41,8 @@ Additionally the user can define the route path for proxy requests.
 ### **WORK IN PROGRESS**
 - (bluefox) **Breaking change:** Node.js >= 22.19 and admin >= 7.0.0 are required now
 - (bluefox) The adapter was refactored to TypeScript and JsonConfig; `request` was replaced by `axios`
+- (bluefox) Fixed: files outside of a configured local directory could be read via ".." in the path
+- (bluefox) Fixed: the timeout check was not stopped when web unloaded the extension
 - (ioBroker-Bot) Adapter requires js-controller >= 6.0.11 now.
 - (ipod86) Credentials are masked in all log lines (`user:pass@` and query parameters like `password`, `user`, `token`, `apikey`); the proxy options are logged at debug level only (#276)
 
