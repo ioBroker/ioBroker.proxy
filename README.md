@@ -15,6 +15,7 @@ Specified routes will be available under `http://ip:8082/proxy.0/context/...`. O
 ## Configuration
 - Extend WEB adapter: For which web instance will active this proxy.
 - Route path: Path for proxy. If "/proxy.0", so the routes will be available under `http://webIP:8082/proxy.0/...`
+  Empty means `proxy.<instance>/`. Set it to `/` to install the routes directly below the root of the web server, e.g. a context `.well-known/acme-challenge/` is then available under `http://webIP:8082/.well-known/acme-challenge/...`
 - Error timeout(ms): Minimal interval between retries if the requested resource was unavailable or returned error.
 - Use simple proxy: in this case the very simple but robust method will be used. It is not suitable for web sockets or POST request. Use this method if you have some issues with WEB Instance or socket.io communication.  
 
@@ -43,6 +44,7 @@ Additionally the user can define the route path for proxy requests.
 - (bluefox) The adapter was refactored to TypeScript and JsonConfig; `request` was replaced by `axios` and `mime` by `mime-types`
 - (bluefox) Fixed: files outside of a configured local directory could be read via ".." in the path
 - (bluefox) Fixed: the timeout check was not stopped when web unloaded the extension
+- (bluefox) Documented how to install the routes directly below the root of the web server (route path `/`) (#133)
 - (ioBroker-Bot) Adapter requires js-controller >= 6.0.11 now.
 - (ipod86) Credentials are masked in all log lines (`user:pass@` and query parameters like `password`, `user`, `token`, `apikey`); the proxy options are logged at debug level only (#276)
 

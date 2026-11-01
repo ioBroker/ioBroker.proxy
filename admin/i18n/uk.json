@@ -1,7 +1,7 @@
 {
     "Context": "Контекст",
     "Default for all paths": "Типово для всіх шляхів",
-    "Empty for \"proxy.<instance>/\"": "Порожньо для \"proxy.<instance>/\"",
+    "Empty for \"proxy.<instance>/\", \"/\" for the root of the web server": "Порожньо для \"proxy.<instance>/\", \"/\" для кореня веб-сервера",
     "Error timeout (ms)": "Тайм-аут помилки (мс)",
     "Main settings": "Основні налаштування",
     "Maximum Parallel Requests": "Максимальна кількість паралельних запитів",

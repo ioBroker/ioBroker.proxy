@@ -1,7 +1,7 @@
 {
     "Context": "contesto",
     "Default for all paths": "Predefinito per tutti i percorsi",
-    "Empty for \"proxy.<instance>/\"": "Vuoto per \"proxy.<instance>/\"",
+    "Empty for \"proxy.<instance>/\", \"/\" for the root of the web server": "Vuoto per \"proxy.<instance>/\", \"/\" per la radice del server web",
     "Error timeout (ms)": "Timeout errore (ms)",
     "Main settings": "Impostazioni principali",
     "Maximum Parallel Requests": "Numero massimo di richieste parallele",

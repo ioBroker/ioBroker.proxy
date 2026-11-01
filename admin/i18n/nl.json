@@ -1,7 +1,7 @@
 {
     "Context": "verband",
     "Default for all paths": "Standaard voor alle paden",
-    "Empty for \"proxy.<instance>/\"": "Leeg voor \"proxy.<instance>/\"",
+    "Empty for \"proxy.<instance>/\", \"/\" for the root of the web server": "Leeg voor \"proxy.<instance>/\", \"/\" voor de root van de webserver",
     "Error timeout (ms)": "Fout-time-out (ms)",
     "Main settings": "Hoofdinstellingen",
     "Maximum Parallel Requests": "Maximum aantal parallelle verzoeken",

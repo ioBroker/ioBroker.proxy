@@ -1,7 +1,7 @@
 {
     "Context": "Kontekst",
     "Default for all paths": "Domyślnie dla wszystkich ścieżek",
-    "Empty for \"proxy.<instance>/\"": "Puste dla \"proxy.<instance>/\"",
+    "Empty for \"proxy.<instance>/\", \"/\" for the root of the web server": "Puste dla \"proxy.<instance>/\", \"/\" dla katalogu głównego serwera WWW",
     "Error timeout (ms)": "Błąd limitu czasu (ms)",
     "Main settings": "Ustawienia główne",
     "Maximum Parallel Requests": "Maksymalna liczba żądań równoległych",

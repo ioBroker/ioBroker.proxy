@@ -1,7 +1,7 @@
 {
     "Context": "内容",
     "Default for all paths": "所有路径的默认值",
-    "Empty for \"proxy.<instance>/\"": "留空则为 \"proxy.<instance>/\"",
+    "Empty for \"proxy.<instance>/\", \"/\" for the root of the web server": "留空则为 \"proxy.<instance>/\"，\"/\" 表示 Web 服务器的根目录",
     "Error timeout (ms)": "错误超时（毫秒）",
     "Main settings": "主要设置",
     "Maximum Parallel Requests": "最大并行请求",

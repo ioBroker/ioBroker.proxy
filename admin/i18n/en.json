@@ -1,7 +1,7 @@
 {
     "Context": "Context",
     "Default for all paths": "Default for all paths",
-    "Empty for \"proxy.<instance>/\"": "Empty for \"proxy.<instance>/\"",
+    "Empty for \"proxy.<instance>/\", \"/\" for the root of the web server": "Empty for \"proxy.<instance>/\", \"/\" for the root of the web server",
     "Error timeout (ms)": "Error timeout (ms)",
     "Main settings": "Main settings",
     "Maximum Parallel Requests": "Maximum Parallel Requests",

@@ -194,6 +194,13 @@ describe('ProxyExtension', () => {
             assert.strictEqual(await res.text(), 'b');
         });
 
+        it('should install the rules directly below the root with route "/"', async () => {
+            await start({ route: '/', rules: [{ regex: '.well-known/acme-challenge/', url: `${join(dir, 'sub')}/` }] });
+            const res = await fetch(`${webUrl}/.well-known/acme-challenge/b.txt`);
+            assert.strictEqual(res.status, 200);
+            assert.strictEqual(await res.text(), 'b');
+        });
+
         it('should deliver a single file and use the route without leading slash', async () => {
             await start({ route: '/files/', rules: [{ regex: 'b.txt', url: join(dir, 'sub', 'b.txt') }] });
             const res = await fetch(`${webUrl}/files/b.txt`);

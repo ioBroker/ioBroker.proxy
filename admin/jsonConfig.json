@@ -32,7 +32,7 @@
                     "newLine": true,
                     "type": "text",
                     "label": "Route path",
-                    "help": "Empty for \"proxy.<instance>/\"",
+                    "help": "Empty for \"proxy.<instance>/\", \"/\" for the root of the web server",
                     "xs": 12,
                     "sm": 12,
                     "md": 6,
