@@ -1,0 +1,15 @@
+{
+    "Context": "Контекст",
+    "Default for all paths": "По умолчанию для всех путей",
+    "Empty for \"proxy.<instance>/\", \"/\" for the root of the web server": "Пусто для \"proxy.<instance>/\", \"/\" для корня веб-сервера",
+    "Error timeout (ms)": "Тайм-аут ошибки (мс)",
+    "Main settings": "Основные настройки",
+    "Maximum Parallel Requests": "Максимальное количество параллельных запросов",
+    "Minimal interval between retries after an error": "Минимальный интервал между повторными попытками после ошибки",
+    "Paths": "пути",
+    "Route path": "Путь в URL",
+    "Timeout": "Тайм-аут",
+    "URL": "URL",
+    "Use as web adapter extension": "Использовать, как расширение web-драйвера",
+    "Use simple proxy (no sockets)": "Простой прокси (без сокетов)"
+}

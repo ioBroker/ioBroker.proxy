@@ -1,0 +1,15 @@
+{
+    "Context": "Kontekst",
+    "Default for all paths": "Domyślnie dla wszystkich ścieżek",
+    "Empty for \"proxy.<instance>/\", \"/\" for the root of the web server": "Puste dla \"proxy.<instance>/\", \"/\" dla katalogu głównego serwera WWW",
+    "Error timeout (ms)": "Błąd limitu czasu (ms)",
+    "Main settings": "Ustawienia główne",
+    "Maximum Parallel Requests": "Maksymalna liczba żądań równoległych",
+    "Minimal interval between retries after an error": "Minimalny odstęp między ponownymi próbami po błędzie",
+    "Paths": "Ścieżki",
+    "Route path": "Ścieżka trasy",
+    "Timeout": "Limit czasu",
+    "URL": "URL",
+    "Use as web adapter extension": "Przedłuż adapter WEB",
+    "Use simple proxy (no sockets)": "Użyj prostego proxy (bez gniazd)"
+}

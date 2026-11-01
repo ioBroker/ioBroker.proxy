@@ -13,6 +13,7 @@
         "it": "Consentire anche file proxy direttamente",
         "es": "Permitir también los archivos proxy directamente",
         "pl": "Allow również plik pośredni",
+        "uk": "Дозволено також проксіювати файли напряму",
         "zh-cn": "还允许直接签发档案"
       },
       "1.3.1": {
@@ -25,6 +26,7 @@
         "it": "Ripristinare la chiamata di aggiornamento WS automatica aggiunta in 1.3.0 perché a volte produceva problemi con le connessioni websocket",
         "es": "Revertir la llamada de actualización automática de WS agregada en 1.3.0 porque a veces producía problemas con las conexiones websocket",
         "pl": "Cofnij automatyczne wywołanie aktualizacji WS dodane w wersji 1.3.0, ponieważ czasami pojawiają się problemy z połączeniami z gniazdami sieciowymi",
+        "uk": "Скасовано автоматичний виклик оновлення WS, доданий у 1.3.0, оскільки він іноді спричиняв проблеми з websocket-з’єднаннями",
         "zh-cn": "恢复 1.3.0 中添加的自动 WS 升级调用，因为有时会产生 websocket 连接问题"
       },
       "1.3.0": {
@@ -37,6 +39,7 @@
         "it": "Consentono di configurare il numero massimo di richieste parallele per route e/o globalmente. Il valore predefinito è 10 anche per ora\nCerca di prevenire arresti anomali causati da errori del socket",
         "es": "Permitir configurar el máximo de peticiones paralelas por ruta y/o globalmente. El valor predeterminado es 10 a partir de ahora también\nTrate de evitar bloqueos por errores de socket",
         "pl": "Pozwól skonfigurować maksymalną liczbę równoległych żądań według trasy i/lub globalnie. Na razie domyślna wartość to 10\nStaraj się zapobiegać awariom przez błędy gniazd",
+        "uk": "Дозволено налаштовувати максимальну кількість паралельних запитів для маршруту та/або глобально. Типово тепер також 10\nСпроба запобігти збоям через помилки сокетів",
         "zh-cn": "允许通过路由和/或全局配置最大并行请求。现在默认也是 10\n尝试通过套接字错误防止崩溃"
       },
       "1.2.2": {
@@ -49,6 +52,7 @@
         "it": "Fallback a \"application / octet-stream\" quando non è stato possibile determinare il tipo MIME per un file\nTaglia i nomi dei file quando li cerchi nel filesystem se \"?\" o \"#\" sono inclusi",
         "es": "Volver a \"application / octet-stream\" cuando no se pudo determinar el tipo de mime de un archivo\nCorte los nombres de archivo cuando los busque en el sistema de archivos si \"?\" o \"#\" están incluidos",
         "pl": "Powrót do „application / octet-stream”, gdy nie można określić typu MIME dla pliku\nWytnij nazwy plików podczas wyszukiwania ich w systemie plików, jeśli \"?\" lub „#” są uwzględnione",
+        "uk": "Резервний тип \"application/octet-stream\", якщо MIME-тип файлу не вдалося визначити\nІмена файлів обрізаються під час пошуку у файловій системі, якщо містять \"?\" або \"#\"",
         "zh-cn": "无法确定文件的哑剧类型时回退到“应用程序/八位字节流”\n如果在文件系统中查找文件名，则剪切文件名是否为“？”或包含“＃”"
       },
       "1.2.1": {
@@ -61,6 +65,7 @@
         "it": "Errore corretto con accesso ai file locali",
         "es": "Error corregido con acceso a archivos locales",
         "pl": "Poprawiony błąd dostępu do lokalnych plików",
+        "uk": "Виправлено помилку доступу до локальних файлів",
         "zh-cn": "纠正了对本地文件的访问错误"
       },
       "1.2.0": {
@@ -73,6 +78,7 @@
         "it": "dipendenze aggiornate",
         "es": "dependencias actualizadas",
         "pl": "zależności zaktualizowane",
+        "uk": "Оновлено залежності",
         "zh-cn": "依赖关系已更新"
       },
       "1.1.1": {
@@ -85,6 +91,7 @@
         "it": "Implementato semplice proxy per eliminare il problema socket.io",
         "es": "Implementado proxy simple para eliminar el problema de socket.io.",
         "pl": "Zaimplementowano proste proxy w celu wyeliminowania problemu z socket.io",
+        "uk": "Реалізовано простий проксі для усунення проблеми socket.io",
         "zh-cn": "实现简单代理以消除socket.io问题"
       }
     },
@@ -98,6 +105,7 @@
       "it": "procuratore",
       "es": "Apoderado",
       "pl": "Pełnomocnik",
+      "uk": "Проксі",
       "zh-cn": "代理人"
     },
     "desc": {
@@ -110,6 +118,7 @@
       "it": "Questo adattatore consente di raggiungere altri server HTTP (come WEB CAM) nello stesso server web",
       "es": "Este adaptador permite llegar a otros servidores HTTP (como WEB CAM) en el mismo servidor web",
       "pl": "Ten adapter umożliwia dotarcie do innych serwerów HTTP (takich jak WEB CAM) na tym samym serwerze internetowym",
+      "uk": "Цей адаптер дозволяє звертатися до інших HTTP-серверів (наприклад, веб-камер) через той самий веб-сервер",
       "zh-cn": "此适配器允许访问同一Web服务器中的其他HTTP服务器（例如WEB CAM）"
     },
     "authors": [
@@ -123,7 +132,7 @@
     "mode": "extension",
     "loglevel": "info",
     "icon": "proxy.png",
-    "webExtension": "lib/proxy.js",
+    "webExtension": "build/lib/proxy.js",
     "readme": "https://github.com/ioBroker/ioBroker.proxy/blob/master/README.md",
     "keywords": [
       "web",
@@ -143,8 +152,15 @@
     "dataSource": "none",
     "tier": 3,
     "adminUI": {
-      "config": "materialize"
-    }
+      "config": "json"
+    },
+    "nogit": true,
+    "globalDependencies": [
+      {
+        "admin": ">=7.6.20"
+      }
+    ],
+    "compact": false
   },
   "native": {
     "route": "",

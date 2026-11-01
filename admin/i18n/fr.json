@@ -1,0 +1,15 @@
+{
+    "Context": "Contexte",
+    "Default for all paths": "Par défaut pour tous les chemins",
+    "Empty for \"proxy.<instance>/\", \"/\" for the root of the web server": "Vide pour \"proxy.<instance>/\", \"/\" pour la racine du serveur web",
+    "Error timeout (ms)": "Délai d'erreur (ms)",
+    "Main settings": "Paramètres principaux",
+    "Maximum Parallel Requests": "Requêtes parallèles maximales",
+    "Minimal interval between retries after an error": "Intervalle minimal entre les tentatives après une erreur",
+    "Paths": "Chemins",
+    "Route path": "Chemin d'itinéraire",
+    "Timeout": "Timeout",
+    "URL": "URL",
+    "Use as web adapter extension": "Étendre l'adaptateur WEB",
+    "Use simple proxy (no sockets)": "Utiliser un proxy simple (pas de sockets)"
+}
