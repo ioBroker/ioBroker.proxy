@@ -387,6 +387,12 @@ class ProxyExtension {
             this.interval = null;
         }
     }
+
+    /** Called by the web adapter, when it unloads its extensions */
+    public unload(): Promise<void> {
+        this.destroy();
+        return Promise.resolve();
+    }
 }
 
 // `module.exports = ProxyExtension` like before, so that every web version can load it (older ones know no `.default`)

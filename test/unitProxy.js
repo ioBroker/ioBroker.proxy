@@ -250,6 +250,13 @@ describe('ProxyExtension', () => {
     });
 
     describe('http-proxy-middleware', () => {
+        it('should stop the interval, when web unloads the extension', async () => {
+            await start({ rules: [{ regex: 'cam/', url: targetUrl }] });
+            assert.strictEqual(adapter.intervals.size, 1);
+            await extension.unload();
+            assert.strictEqual(adapter.intervals.size, 0);
+        });
+
         it('should forward requests and remove the route from the path', async () => {
             await start({ rules: [{ regex: 'cam/', url: targetUrl }] });
             assert.strictEqual(adapter.intervals.size, 1);
