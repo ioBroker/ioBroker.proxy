@@ -1,0 +1,121 @@
+{
+    "i18n": true,
+    "type": "tabs",
+    "items": {
+        "_main": {
+            "type": "panel",
+            "label": "Main settings",
+            "items": {
+                "_logo": {
+                    "type": "staticImage",
+                    "src": "proxy.png",
+                    "style": { "width": "64px" },
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12
+                },
+                "webInstance": {
+                    "newLine": true,
+                    "type": "instance",
+                    "label": "Use as web adapter extension",
+                    "adapter": "web",
+                    "all": true,
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 6,
+                    "lg": 4,
+                    "xl": 4
+                },
+                "route": {
+                    "newLine": true,
+                    "type": "text",
+                    "label": "Route path",
+                    "help": "Empty for \"proxy.<instance>/\"",
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 6,
+                    "lg": 4,
+                    "xl": 4
+                },
+                "simpleProxy": {
+                    "newLine": true,
+                    "type": "checkbox",
+                    "label": "Use simple proxy (no sockets)",
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 6,
+                    "lg": 4,
+                    "xl": 4
+                },
+                "errorTimeout": {
+                    "newLine": true,
+                    "type": "number",
+                    "label": "Error timeout (ms)",
+                    "help": "Minimal interval between retries after an error",
+                    "min": 1000,
+                    "default": 10000,
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 6,
+                    "lg": 4,
+                    "xl": 4
+                },
+                "parallelRequests": {
+                    "newLine": true,
+                    "type": "number",
+                    "label": "Maximum Parallel Requests",
+                    "help": "Default for all paths",
+                    "min": 1,
+                    "default": 10,
+                    "hidden": "!!data.simpleProxy",
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 6,
+                    "lg": 4,
+                    "xl": 4
+                }
+            }
+        },
+        "_paths": {
+            "type": "panel",
+            "label": "Paths",
+            "items": {
+                "rules": {
+                    "type": "table",
+                    "xs": 12,
+                    "sm": 12,
+                    "md": 12,
+                    "lg": 12,
+                    "xl": 12,
+                    "items": [
+                        {
+                            "type": "text",
+                            "attr": "regex",
+                            "title": "Context",
+                            "width": "30%"
+                        },
+                        {
+                            "type": "text",
+                            "attr": "url",
+                            "title": "URL"
+                        },
+                        {
+                            "type": "number",
+                            "attr": "timeout",
+                            "title": "Timeout",
+                            "width": "100px"
+                        },
+                        {
+                            "type": "number",
+                            "attr": "parallelRequests",
+                            "title": "Maximum Parallel Requests",
+                            "width": "100px"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

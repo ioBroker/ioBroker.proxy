@@ -123,7 +123,7 @@
     "mode": "extension",
     "loglevel": "info",
     "icon": "proxy.png",
-    "webExtension": "lib/proxy.js",
+    "webExtension": "build/lib/proxy.js",
     "readme": "https://github.com/ioBroker/ioBroker.proxy/blob/master/README.md",
     "keywords": [
       "web",
@@ -143,8 +143,14 @@
     "dataSource": "none",
     "tier": 3,
     "adminUI": {
-      "config": "materialize"
-    }
+      "config": "json"
+    },
+    "nogit": true,
+    "globalDependencies": [
+      {
+        "admin": ">=7.0.0"
+      }
+    ]
   },
   "native": {
     "route": "",

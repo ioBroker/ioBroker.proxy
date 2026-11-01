@@ -1,0 +1,15 @@
+{
+    "Context": "Context",
+    "Default for all paths": "Default for all paths",
+    "Empty for \"proxy.<instance>/\"": "Empty for \"proxy.<instance>/\"",
+    "Error timeout (ms)": "Error timeout (ms)",
+    "Main settings": "Main settings",
+    "Maximum Parallel Requests": "Maximum Parallel Requests",
+    "Minimal interval between retries after an error": "Minimal interval between retries after an error",
+    "Paths": "Paths",
+    "Route path": "Route path",
+    "Timeout": "Timeout",
+    "URL": "URL",
+    "Use as web adapter extension": "Use as web adapter extension",
+    "Use simple proxy (no sockets)": "Use simple proxy (no sockets)"
+}

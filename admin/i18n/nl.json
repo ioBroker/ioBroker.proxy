@@ -1,0 +1,15 @@
+{
+    "Context": "verband",
+    "Default for all paths": "Standaard voor alle paden",
+    "Empty for \"proxy.<instance>/\"": "Leeg voor \"proxy.<instance>/\"",
+    "Error timeout (ms)": "Fout-time-out (ms)",
+    "Main settings": "Hoofdinstellingen",
+    "Maximum Parallel Requests": "Maximum aantal parallelle verzoeken",
+    "Minimal interval between retries after an error": "Minimale tijd tussen nieuwe pogingen na een fout",
+    "Paths": "Paths",
+    "Route path": "Route pad",
+    "Timeout": "timeout",
+    "URL": "URL",
+    "Use as web adapter extension": "Breid WEB-adapter uit",
+    "Use simple proxy (no sockets)": "Gebruik eenvoudige proxy (geen sockets)"
+}

@@ -1,0 +1,15 @@
+{
+    "Context": "内容",
+    "Default for all paths": "所有路径的默认值",
+    "Empty for \"proxy.<instance>/\"": "留空则为 \"proxy.<instance>/\"",
+    "Error timeout (ms)": "错误超时（毫秒）",
+    "Main settings": "主要设置",
+    "Maximum Parallel Requests": "最大并行请求",
+    "Minimal interval between retries after an error": "出错后重试的最小间隔",
+    "Paths": "路径",
+    "Route path": "路线路径",
+    "Timeout": "超时",
+    "URL": "网址",
+    "Use as web adapter extension": "扩展WEB适配器",
+    "Use simple proxy (no sockets)": "使用简单代理（无套接字）"
+}
