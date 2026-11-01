@@ -171,6 +171,11 @@ describe('ProxyExtension', () => {
             const html = await res.text();
             assert.ok(html.includes('<a href="./a.json">a.json</a><br><a href="./sub">sub</a>'));
 
+            // unknown extension
+            writeFileSync(join(dir, 'c.unknownext'), 'c');
+            res = await fetch(`${webUrl}/proxy.0/dir/c.unknownext`);
+            assert.strictEqual(res.headers.get('content-type'), 'application/octet-stream');
+
             res = await fetch(`${webUrl}/proxy.0/dir/nothing.txt`);
             assert.strictEqual(res.status, 404);
         });

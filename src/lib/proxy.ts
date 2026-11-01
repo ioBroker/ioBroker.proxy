@@ -4,7 +4,7 @@ import { extname, isAbsolute, normalize, relative } from 'node:path';
 
 import axios, { type AxiosResponse, type RawAxiosRequestHeaders } from 'axios';
 import { createProxyMiddleware, type Options } from 'http-proxy-middleware';
-import * as mime from 'mime';
+import * as mime from 'mime-types';
 
 import type { NextFunction, ProxyRequest, ProxyResponse, ProxyRule, WebApp } from './types';
 import { maskUrl, toInt } from './utils';
@@ -378,7 +378,7 @@ class ProxyExtension {
                         res.status(500).send(`[proxy] Cannot read file: ${(e as Error).toString()}`);
                         return;
                     }
-                    res.contentType(mime.getType(extname(fileName).substring(1)) || 'application/octet-stream');
+                    res.contentType(mime.lookup(extname(fileName).substring(1)) || 'application/octet-stream');
                     res.status(200).send(data);
                 }
             } else {
