@@ -75,6 +75,4 @@ jobs:
         with:
           node-version: '24.x'
           build: true
-          # Remove, once npm trusted publishing is configured for this package
-          npm-token: ${{ secrets.NPM_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
