@@ -44,7 +44,7 @@ You can read more about context [here](https://www.npmjs.com/package/http-proxy-
     ### **WORK IN PROGRESS**
 -->
 ## Changelog
-### **WORK IN PROGRESS**
+### 2.0.1 (2026-11-02)
 - (bluefox) **Breaking change:** Node.js >= 22.19 and admin >= 7.6.20 are required now
 - (bluefox) The adapter was refactored to TypeScript and JsonConfig; `request` was replaced by `axios` and `mime` by `mime-types`
 - (bluefox) Fixed: files outside of a configured local directory could be read via ".." in the path
